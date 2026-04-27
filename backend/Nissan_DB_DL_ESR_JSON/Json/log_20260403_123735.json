@@ -1,0 +1,1869 @@
+{
+    "expand": "names,schema",
+    "startAt": 0,
+    "maxResults": 1000,
+    "total": 1,
+    "issues": [
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+            "id": "548118",
+            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/548118",
+            "key": "CDCFM-8985",
+            "fields": {
+                "customfield_17149": null,
+                "resolution": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/resolution/10001",
+                    "id": "10001",
+                    "description": "Issue will not be done, processed.",
+                    "name": "Won't Do"
+                },
+                "customfield_11720": null,
+                "customfield_10510": null,
+                "customfield_10500": null,
+                "customfield_10621": null,
+                "customfield_10501": null,
+                "customfield_10622": null,
+                "customfield_10502": null,
+                "customfield_10623": null,
+                "customfield_10503": null,
+                "customfield_10624": null,
+                "customfield_11715": null,
+                "customfield_10625": null,
+                "customfield_10504": null,
+                "customfield_10626": null,
+                "customfield_10505": null,
+                "customfield_10506": null,
+                "customfield_10507": null,
+                "customfield_11716": null,
+                "customfield_10508": null,
+                "customfield_11718": null,
+                "customfield_10509": null,
+                "lastViewed": "2026-04-03T00:57:55.512+0000",
+                "customfield_10620": null,
+                "customfield_10612": null,
+                "customfield_10613": null,
+                "customfield_10614": null,
+                "aggregatetimeoriginalestimate": null,
+                "customfield_10615": null,
+                "customfield_10616": null,
+                "customfield_11706": null,
+                "customfield_10618": null,
+                "customfield_11708": null,
+                "customfield_11707": null,
+                "customfield_10619": null,
+                "issuelinks": [
+                    {
+                        "id": "694641",
+                        "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issueLink/694641",
+                        "outwardIssue": {
+                            "id": "540759",
+                            "key": "CDCFM-8511",
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/540759",
+                            "fields": {
+                                "summary": "[HMI][CDC PI25 InfoEV] New Intelligent E icon types added to EV Entrance",
+                                "status": {
+                                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/status/6",
+                                    "description": "The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.",
+                                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/statuses/closed.png",
+                                    "name": "Closed",
+                                    "id": "6",
+                                    "statusCategory": {
+                                        "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/statuscategory/3",
+                                        "id": 3,
+                                        "key": "done",
+                                        "colorName": "success",
+                                        "name": "Done"
+                                    }
+                                },
+                                "priority": {
+                                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/priority/10105",
+                                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/priorities/blocker.svg",
+                                    "name": "None",
+                                    "id": "10105"
+                                },
+                                "issuetype": {
+                                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issuetype/10001",
+                                    "id": "10001",
+                                    "description": "Created by Jira Software - do not edit or delete. Issue type for a user story.",
+                                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/issuetypes/story.svg",
+                                    "name": "Story",
+                                    "subtask": false
+                                }
+                            }
+                        },
+                        "type": {
+                            "id": "10701",
+                            "name": "Blockers",
+                            "inward": "is blocked by",
+                            "outward": "blocks",
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issueLinkType/10701"
+                        }
+                    },
+                    {
+                        "id": "765177",
+                        "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issueLink/765177",
+                        "outwardIssue": {
+                            "id": "540766",
+                            "key": "CDCFM-8514",
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/540766",
+                            "fields": {
+                                "summary": "[HMI][CDC PI25 InfoEV] New items added to EV settings",
+                                "status": {
+                                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/status/6",
+                                    "description": "The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.",
+                                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/statuses/closed.png",
+                                    "name": "Closed",
+                                    "id": "6",
+                                    "statusCategory": {
+                                        "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/statuscategory/3",
+                                        "id": 3,
+                                        "key": "done",
+                                        "colorName": "success",
+                                        "name": "Done"
+                                    }
+                                },
+                                "priority": {
+                                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/priority/10105",
+                                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/priorities/blocker.svg",
+                                    "name": "None",
+                                    "id": "10105"
+                                },
+                                "issuetype": {
+                                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issuetype/10001",
+                                    "id": "10001",
+                                    "description": "Created by Jira Software - do not edit or delete. Issue type for a user story.",
+                                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/issuetypes/story.svg",
+                                    "name": "Story",
+                                    "subtask": false
+                                }
+                            }
+                        },
+                        "type": {
+                            "id": "10701",
+                            "name": "Blockers",
+                            "inward": "is blocked by",
+                            "outward": "blocks",
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issueLinkType/10701"
+                        }
+                    },
+                    {
+                        "id": "766536",
+                        "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issueLink/766536",
+                        "outwardIssue": {
+                            "id": "651764",
+                            "key": "CDCFM-9924",
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/651764",
+                            "fields": {
+                                "summary": "[HMI][InfoEV]Change of the display condition for Battery Temperature Management Icon",
+                                "status": {
+                                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/status/6",
+                                    "description": "The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.",
+                                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/statuses/closed.png",
+                                    "name": "Closed",
+                                    "id": "6",
+                                    "statusCategory": {
+                                        "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/statuscategory/3",
+                                        "id": 3,
+                                        "key": "done",
+                                        "colorName": "success",
+                                        "name": "Done"
+                                    }
+                                },
+                                "priority": {
+                                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/priority/10105",
+                                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/priorities/blocker.svg",
+                                    "name": "None",
+                                    "id": "10105"
+                                },
+                                "issuetype": {
+                                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issuetype/10001",
+                                    "id": "10001",
+                                    "description": "Created by Jira Software - do not edit or delete. Issue type for a user story.",
+                                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/issuetypes/story.svg",
+                                    "name": "Story",
+                                    "subtask": false
+                                }
+                            }
+                        },
+                        "type": {
+                            "id": "10701",
+                            "name": "Blockers",
+                            "inward": "is blocked by",
+                            "outward": "blocks",
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issueLinkType/10701"
+                        }
+                    },
+                    {
+                        "id": "765176",
+                        "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issueLink/765176",
+                        "outwardIssue": {
+                            "id": "516187",
+                            "key": "CDCFM-7046",
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/516187",
+                            "fields": {
+                                "summary": "[InfoEV] New items added to EV settings ",
+                                "status": {
+                                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/status/11301",
+                                    "description": "",
+                                    "iconUrl": "https://spaws.jp.nissan.biz/jira/",
+                                    "name": "Backlog",
+                                    "id": "11301",
+                                    "statusCategory": {
+                                        "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/statuscategory/2",
+                                        "id": 2,
+                                        "key": "new",
+                                        "colorName": "default",
+                                        "name": "To Do"
+                                    }
+                                },
+                                "priority": {
+                                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/priority/10104",
+                                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/priorities/lowest.svg",
+                                    "name": "D",
+                                    "id": "10104"
+                                },
+                                "issuetype": {
+                                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issuetype/10000",
+                                    "id": "10000",
+                                    "description": "Created by Jira Software - do not edit or delete. Issue type for a big user story that needs to be broken down.",
+                                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/issuetypes/epic.svg",
+                                    "name": "Epic",
+                                    "subtask": false
+                                }
+                            }
+                        },
+                        "type": {
+                            "id": "10701",
+                            "name": "Blockers",
+                            "inward": "is blocked by",
+                            "outward": "blocks",
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issueLinkType/10701"
+                        }
+                    },
+                    {
+                        "id": "694642",
+                        "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issueLink/694642",
+                        "outwardIssue": {
+                            "id": "516193",
+                            "key": "CDCFM-7050",
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/516193",
+                            "fields": {
+                                "summary": "[InfoEV] New Intelligent E icon types added to EV Entrance",
+                                "status": {
+                                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/status/11301",
+                                    "description": "",
+                                    "iconUrl": "https://spaws.jp.nissan.biz/jira/",
+                                    "name": "Backlog",
+                                    "id": "11301",
+                                    "statusCategory": {
+                                        "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/statuscategory/2",
+                                        "id": 2,
+                                        "key": "new",
+                                        "colorName": "default",
+                                        "name": "To Do"
+                                    }
+                                },
+                                "priority": {
+                                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/priority/10104",
+                                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/priorities/lowest.svg",
+                                    "name": "D",
+                                    "id": "10104"
+                                },
+                                "issuetype": {
+                                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issuetype/10000",
+                                    "id": "10000",
+                                    "description": "Created by Jira Software - do not edit or delete. Issue type for a big user story that needs to be broken down.",
+                                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/issuetypes/epic.svg",
+                                    "name": "Epic",
+                                    "subtask": false
+                                }
+                            }
+                        },
+                        "type": {
+                            "id": "10701",
+                            "name": "Blockers",
+                            "inward": "is blocked by",
+                            "outward": "blocks",
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issueLinkType/10701"
+                        }
+                    },
+                    {
+                        "id": "693480",
+                        "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issueLink/693480",
+                        "outwardIssue": {
+                            "id": "541550",
+                            "key": "CDCFM-8625",
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/541550",
+                            "fields": {
+                                "summary": "[API][InfoEV] EV Entrance functional spec update for CDC PZ1JKL",
+                                "status": {
+                                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/status/6",
+                                    "description": "The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.",
+                                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/statuses/closed.png",
+                                    "name": "Closed",
+                                    "id": "6",
+                                    "statusCategory": {
+                                        "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/statuscategory/3",
+                                        "id": 3,
+                                        "key": "done",
+                                        "colorName": "success",
+                                        "name": "Done"
+                                    }
+                                },
+                                "priority": {
+                                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/priority/10105",
+                                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/priorities/blocker.svg",
+                                    "name": "None",
+                                    "id": "10105"
+                                },
+                                "issuetype": {
+                                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issuetype/10001",
+                                    "id": "10001",
+                                    "description": "Created by Jira Software - do not edit or delete. Issue type for a user story.",
+                                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/issuetypes/story.svg",
+                                    "name": "Story",
+                                    "subtask": false
+                                }
+                            }
+                        },
+                        "type": {
+                            "id": "10003",
+                            "name": "Relates",
+                            "inward": "relates to",
+                            "outward": "relates to",
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issueLinkType/10003"
+                        }
+                    },
+                    {
+                        "id": "640472",
+                        "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issueLink/640472",
+                        "inwardIssue": {
+                            "id": "515920",
+                            "key": "CDCFM-6970",
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/515920",
+                            "fields": {
+                                "summary": "[Navigation][Intelligent-E] Added a new CAN signal of HVbatHeatingStateIcon",
+                                "status": {
+                                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/status/10001",
+                                    "description": "",
+                                    "iconUrl": "https://spaws.jp.nissan.biz/jira/",
+                                    "name": "Close",
+                                    "id": "10001",
+                                    "statusCategory": {
+                                        "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/statuscategory/3",
+                                        "id": 3,
+                                        "key": "done",
+                                        "colorName": "success",
+                                        "name": "Done"
+                                    }
+                                },
+                                "priority": {
+                                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/priority/10104",
+                                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/priorities/lowest.svg",
+                                    "name": "D",
+                                    "id": "10104"
+                                },
+                                "issuetype": {
+                                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issuetype/10000",
+                                    "id": "10000",
+                                    "description": "Created by Jira Software - do not edit or delete. Issue type for a big user story that needs to be broken down.",
+                                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/issuetypes/epic.svg",
+                                    "name": "Epic",
+                                    "subtask": false
+                                }
+                            }
+                        },
+                        "type": {
+                            "id": "10400",
+                            "name": "parent/child",
+                            "inward": "is child of",
+                            "outward": "is parent of",
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issueLinkType/10400"
+                        }
+                    }
+                ],
+                "assignee": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=LGEJ-LGEJ109",
+                    "name": "LGEJ-LGEJ109",
+                    "key": "JIRAUSER15130",
+                    "emailAddress": "dan.tran@lge.com",
+                    "avatarUrls": {
+                        "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?ownerId=JIRAUSER15130&avatarId=14806",
+                        "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&ownerId=JIRAUSER15130&avatarId=14806",
+                        "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&ownerId=JIRAUSER15130&avatarId=14806",
+                        "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&ownerId=JIRAUSER15130&avatarId=14806"
+                    },
+                    "displayName": "TRAN THE DAN",
+                    "active": true,
+                    "timeZone": "Asia/Ho_Chi_Minh"
+                },
+                "customfield_11810": null,
+                "customfield_10600": null,
+                "customfield_10601": null,
+                "customfield_10602": null,
+                "customfield_10603": null,
+                "customfield_10604": null,
+                "customfield_10605": null,
+                "customfield_10606": null,
+                "customfield_10607": null,
+                "customfield_10608": null,
+                "customfield_10609": null,
+                "customfield_18200": null,
+                "customfield_18201": null,
+                "customfield_18202": null,
+                "subtasks": [],
+                "customfield_11920": null,
+                "customfield_11800": null,
+                "customfield_11802": null,
+                "votes": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/CDCFM-8985/votes",
+                    "votes": 0,
+                    "hasVoted": false
+                },
+                "worklog": {
+                    "startAt": 0,
+                    "maxResults": 20,
+                    "total": 0,
+                    "worklogs": []
+                },
+                "issuetype": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issuetype/10001",
+                    "id": "10001",
+                    "description": "Created by Jira Software - do not edit or delete. Issue type for a user story.",
+                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/issuetypes/story.svg",
+                    "name": "Story",
+                    "subtask": false
+                },
+                "customfield_11916": null,
+                "customfield_11919": null,
+                "customfield_11918": null,
+                "customfield_11902": null,
+                "customfield_16112": null,
+                "customfield_16110": null,
+                "customfield_15384": null,
+                "customfield_16114": null,
+                "customfield_16113": null,
+                "timetracking": {},
+                "customfield_16109": null,
+                "customfield_16108": null,
+                "environment": null,
+                "duedate": null,
+                "customfield_10471": null,
+                "customfield_10472": null,
+                "customfield_12530": null,
+                "customfield_10473": null,
+                "customfield_10474": null,
+                "customfield_11564": null,
+                "customfield_13500": null,
+                "customfield_11443": null,
+                "customfield_12532": null,
+                "customfield_13741": null,
+                "customfield_10475": null,
+                "customfield_11563": null,
+                "customfield_12531": null,
+                "customfield_12534": null,
+                "customfield_10477": null,
+                "customfield_13501": null,
+                "customfield_12533": null,
+                "customfield_13614": null,
+                "customfield_13856": null,
+                "customfield_10105": "0|i0513b:0000000003w",
+                "customfield_13613": null,
+                "customfield_12766": null,
+                "customfield_13855": null,
+                "customfield_10106": null,
+                "customfield_10469": null,
+                "customfield_11559": null,
+                "customfield_12527": null,
+                "customfield_13615": null,
+                "customfield_11437": null,
+                "customfield_13857": null,
+                "customfield_13618": null,
+                "customfield_12529": null,
+                "customfield_13617": null,
+                "customfield_12528": null,
+                "customfield_13619": null,
+                "customfield_15917": null,
+                "customfield_10460": null,
+                "customfield_10461": null,
+                "customfield_10462": null,
+                "customfield_10100": null,
+                "customfield_13610": null,
+                "customfield_10463": null,
+                "customfield_13852": null,
+                "customfield_10101": "CDCFM-6970",
+                "customfield_13730": null,
+                "customfield_11431": null,
+                "customfield_10464": null,
+                "customfield_13851": null,
+                "customfield_13612": null,
+                "customfield_10465": null,
+                "customfield_13854": null,
+                "customfield_13611": null,
+                "customfield_10466": null,
+                "customfield_13853": null,
+                "customfield_13603": null,
+                "customfield_13724": null,
+                "customfield_10456": null,
+                "customfield_11425": null,
+                "customfield_13602": null,
+                "customfield_12513": null,
+                "customfield_13723": null,
+                "customfield_10457": null,
+                "customfield_11666": null,
+                "customfield_13605": null,
+                "customfield_10458": null,
+                "customfield_11548": null,
+                "customfield_13604": null,
+                "customfield_13725": null,
+                "customfield_10459": null,
+                "customfield_13607": null,
+                "customfield_13728": null,
+                "timeestimate": null,
+                "customfield_13606": null,
+                "customfield_13727": null,
+                "customfield_11549": null,
+                "customfield_13609": null,
+                "customfield_13608": null,
+                "customfield_13729": null,
+                "status": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/status/6",
+                    "description": "The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.",
+                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/statuses/closed.png",
+                    "name": "Closed",
+                    "id": "6",
+                    "statusCategory": {
+                        "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/statuscategory/3",
+                        "id": 3,
+                        "key": "done",
+                        "colorName": "success",
+                        "name": "Done"
+                    }
+                },
+                "customfield_11663": null,
+                "customfield_10452": null,
+                "customfield_10453": null,
+                "customfield_13601": null,
+                "customfield_11665": null,
+                "customfield_10454": null,
+                "customfield_13600": null,
+                "customfield_13721": null,
+                "customfield_10455": null,
+                "customfield_11664": null,
+                "archiveddate": null,
+                "customfield_13842": null,
+                "customfield_10566": null,
+                "customfield_13834": null,
+                "customfield_10445": null,
+                "customfield_10567": null,
+                "customfield_10446": null,
+                "customfield_10204": null,
+                "customfield_13833": null,
+                "customfield_10447": null,
+                "customfield_10568": null,
+                "customfield_13836": null,
+                "customfield_13714": null,
+                "customfield_10569": null,
+                "customfield_11536": null,
+                "customfield_14807": null,
+                "customfield_11418": null,
+                "aggregatetimeestimate": null,
+                "creator": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=LGEJ-LGEJ109",
+                    "name": "LGEJ-LGEJ109",
+                    "key": "JIRAUSER15130",
+                    "emailAddress": "dan.tran@lge.com",
+                    "avatarUrls": {
+                        "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?ownerId=JIRAUSER15130&avatarId=14806",
+                        "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&ownerId=JIRAUSER15130&avatarId=14806",
+                        "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&ownerId=JIRAUSER15130&avatarId=14806",
+                        "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&ownerId=JIRAUSER15130&avatarId=14806"
+                    },
+                    "displayName": "TRAN THE DAN",
+                    "active": true,
+                    "timeZone": "Asia/Ho_Chi_Minh"
+                },
+                "customfield_11650": null,
+                "customfield_10560": null,
+                "customfield_11771": null,
+                "customfield_10561": null,
+                "customfield_11770": null,
+                "customfield_11652": null,
+                "customfield_10562": null,
+                "customfield_11773": null,
+                "customfield_10441": null,
+                "customfield_11651": null,
+                "customfield_10442": null,
+                "customfield_10563": null,
+                "customfield_10443": null,
+                "customfield_10564": null,
+                "customfield_13832": null,
+                "customfield_12500": [
+                    {
+                        "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/customFieldOption/17996",
+                        "value": "PZ1JKL",
+                        "id": "17996",
+                        "disabled": false
+                    }
+                ],
+                "customfield_13710": null,
+                "customfield_10444": null,
+                "customfield_10565": null,
+                "customfield_10555": null,
+                "customfield_13702": null,
+                "customfield_10434": null,
+                "customfield_13823": null,
+                "customfield_11644": null,
+                "customfield_10556": null,
+                "customfield_10435": null,
+                "customfield_14914": null,
+                "customfield_13822": null,
+                "customfield_10557": null,
+                "customfield_12735": null,
+                "customfield_10437": null,
+                "customfield_11646": null,
+                "customfield_10558": null,
+                "customfield_13824": null,
+                "customfield_10438": null,
+                "customfield_11649": null,
+                "customfield_10559": null,
+                "customfield_13827": null,
+                "customfield_13705": null,
+                "customfield_11527": null,
+                "customfield_10439": null,
+                "customfield_13826": null,
+                "timespent": null,
+                "customfield_10550": null,
+                "customfield_11641": null,
+                "customfield_10551": null,
+                "aggregatetimespent": null,
+                "customfield_10552": null,
+                "customfield_10553": null,
+                "customfield_13700": null,
+                "customfield_13821": null,
+                "customfield_11643": null,
+                "customfield_11642": null,
+                "customfield_10554": null,
+                "customfield_13820": null,
+                "customfield_11634": null,
+                "customfield_10544": null,
+                "customfield_10423": null,
+                "customfield_13812": null,
+                "customfield_12602": null,
+                "customfield_10545": null,
+                "customfield_10424": null,
+                "customfield_13811": null,
+                "customfield_10546": null,
+                "customfield_10547": null,
+                "customfield_13813": null,
+                "customfield_10548": null,
+                "customfield_13816": null,
+                "customfield_10549": null,
+                "customfield_11519": null,
+                "customfield_14904": null,
+                "customfield_13818": null,
+                "customfield_14905": null,
+                "customfield_13817": null,
+                "customfield_13819": null,
+                "workratio": -1,
+                "customfield_11630": null,
+                "customfield_10540": null,
+                "customfield_10541": null,
+                "customfield_10542": null,
+                "customfield_10421": null,
+                "customfield_10543": null,
+                "customfield_10422": null,
+                "customfield_10301": null,
+                "customfield_10533": null,
+                "customfield_13801": null,
+                "customfield_10534": null,
+                "customfield_10414": null,
+                "customfield_10535": null,
+                "customfield_10415": null,
+                "customfield_13802": null,
+                "customfield_11624": null,
+                "customfield_10536": null,
+                "customfield_13805": null,
+                "customfield_10537": null,
+                "customfield_11506": null,
+                "customfield_10416": null,
+                "customfield_13804": null,
+                "customfield_10538": null,
+                "customfield_10417": null,
+                "customfield_11629": null,
+                "customfield_10539": null,
+                "customfield_11508": null,
+                "customfield_13806": null,
+                "customfield_13809": null,
+                "customfield_13808": null,
+                "customfield_10530": null,
+                "customfield_10531": null,
+                "customfield_10410": null,
+                "customfield_10532": null,
+                "customfield_10411": null,
+                "customfield_10522": null,
+                "customfield_10523": null,
+                "customfield_10524": null,
+                "customfield_10403": null,
+                "customfield_10404": null,
+                "customfield_10525": null,
+                "customfield_10526": null,
+                "customfield_10406": null,
+                "customfield_10407": null,
+                "customfield_10528": null,
+                "customfield_10529": null,
+                "customfield_10408": null,
+                "customfield_10409": null,
+                "customfield_12708": null,
+                "customfield_10520": null,
+                "customfield_10521": null,
+                "customfield_10511": null,
+                "customfield_10512": null,
+                "customfield_11721": null,
+                "customfield_10513": null,
+                "customfield_10514": null,
+                "customfield_10515": null,
+                "customfield_10516": null,
+                "customfield_10517": null,
+                "customfield_10518": null,
+                "customfield_10519": null,
+                "customfield_13580": null,
+                "customfield_13582": null,
+                "customfield_13581": null,
+                "customfield_13583": null,
+                "customfield_15401": null,
+                "customfield_13102": null,
+                "customfield_15520": null,
+                "customfield_13588": null,
+                "customfield_13106": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/customFieldOption/36236",
+                    "value": "IRI26.01.03",
+                    "id": "36236",
+                    "disabled": false
+                },
+                "customfield_17702": null,
+                "customfield_15403": null,
+                "customfield_16612": null,
+                "customfield_15524": null,
+                "customfield_15516": null,
+                "customfield_14549": null,
+                "customfield_15517": null,
+                "customfield_13690": null,
+                "customfield_15991": null,
+                "customfield_13571": null,
+                "customfield_13570": null,
+                "customfield_13573": null,
+                "customfield_13694": null,
+                "customfield_12000": null,
+                "customfield_12121": null,
+                "customfield_13572": null,
+                "customfield_13693": null,
+                "customfield_12120": null,
+                "customfield_15995": null,
+                "customfield_13575": null,
+                "customfield_14540": null,
+                "customfield_12002": null,
+                "customfield_12001": null,
+                "customfield_11034": null,
+                "customfield_15993": null,
+                "customfield_13577": null,
+                "customfield_12004": null,
+                "customfield_15514": null,
+                "customfield_13576": null,
+                "customfield_14547": null,
+                "customfield_12003": null,
+                "customfield_15515": null,
+                "customfield_13579": null,
+                "customfield_15633": null,
+                "customfield_15996": "11811_*:*_1_*:*_7705307558_*|*_6_*:*_1_*:*_0_*|*_10237_*:*_1_*:*_2972",
+                "customfield_13578": null,
+                "customfield_15634": null,
+                "customfield_13569": null,
+                "customfield_12359": null,
+                "customfield_12117": null,
+                "customfield_15505": null,
+                "components": [],
+                "customfield_15980": null,
+                "customfield_13560": null,
+                "customfield_13681": null,
+                "customfield_12350": null,
+                "customfield_13680": null,
+                "customfield_13562": null,
+                "customfield_14531": null,
+                "customfield_12110": null,
+                "customfield_13561": null,
+                "customfield_13682": null,
+                "customfield_15621": null,
+                "customfield_15500": null,
+                "customfield_13564": null,
+                "customfield_13685": null,
+                "customfield_13563": null,
+                "customfield_13684": null,
+                "customfield_12111": null,
+                "customfield_13566": null,
+                "customfield_13687": null,
+                "customfield_12114": null,
+                "customfield_15503": null,
+                "customfield_13565": null,
+                "customfield_13568": null,
+                "customfield_14533": null,
+                "customfield_13689": null,
+                "customfield_13567": null,
+                "customfield_12115": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/customFieldOption/18836",
+                    "value": "FALSE",
+                    "id": "18836",
+                    "disabled": false
+                },
+                "customfield_15502": "None",
+                "customfield_13559": null,
+                "customfield_13558": null,
+                "customfield_13679": null,
+                "customfield_15616": null,
+                "customfield_13670": null,
+                "customfield_13551": null,
+                "customfield_13672": null,
+                "customfield_13550": null,
+                "customfield_13671": null,
+                "customfield_15973": "0.0",
+                "customfield_13553": null,
+                "reporter": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=LGEJ-LGEJ109",
+                    "name": "LGEJ-LGEJ109",
+                    "key": "JIRAUSER15130",
+                    "emailAddress": "dan.tran@lge.com",
+                    "avatarUrls": {
+                        "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?ownerId=JIRAUSER15130&avatarId=14806",
+                        "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&ownerId=JIRAUSER15130&avatarId=14806",
+                        "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&ownerId=JIRAUSER15130&avatarId=14806",
+                        "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&ownerId=JIRAUSER15130&avatarId=14806"
+                    },
+                    "displayName": "TRAN THE DAN",
+                    "active": true,
+                    "timeZone": "Asia/Ho_Chi_Minh"
+                },
+                "customfield_13552": null,
+                "customfield_13676": null,
+                "customfield_13554": null,
+                "customfield_14525": null,
+                "customfield_13675": null,
+                "customfield_13557": null,
+                "customfield_14401": null,
+                "customfield_14522": null,
+                "customfield_12347": null,
+                "customfield_12105": null,
+                "customfield_15853": null,
+                "customfield_15732": null,
+                "customfield_15974": "0.0",
+                "customfield_13556": null,
+                "customfield_14523": null,
+                "customfield_13677": null,
+                "customfield_13314": null,
+                "customfield_13548": null,
+                "customfield_14638": null,
+                "customfield_13547": null,
+                "customfield_14515": null,
+                "customfield_13549": null,
+                "customfield_16819": null,
+                "progress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "archivedby": null,
+                "customfield_12570": null,
+                "customfield_12572": null,
+                "customfield_14510": null,
+                "customfield_11482": null,
+                "customfield_12571": null,
+                "project": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/project/12008",
+                    "id": "12008",
+                    "key": "CDCFM",
+                    "name": "CDC FO Management",
+                    "projectTypeKey": "software",
+                    "avatarUrls": {
+                        "48x48": "https://spaws.jp.nissan.biz/jira/secure/projectavatar?avatarId=10324",
+                        "24x24": "https://spaws.jp.nissan.biz/jira/secure/projectavatar?size=small&avatarId=10324",
+                        "16x16": "https://spaws.jp.nissan.biz/jira/secure/projectavatar?size=xsmall&avatarId=10324",
+                        "32x32": "https://spaws.jp.nissan.biz/jira/secure/projectavatar?size=medium&avatarId=10324"
+                    }
+                },
+                "customfield_13542": null,
+                "customfield_12573": null,
+                "customfield_13544": null,
+                "customfield_14513": null,
+                "customfield_13543": null,
+                "customfield_13546": null,
+                "customfield_14511": null,
+                "customfield_13545": null,
+                "customfield_14512": null,
+                "customfield_11488": null,
+                "customfield_13537": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/customFieldOption/18933",
+                    "value": "VNEXT",
+                    "id": "18933",
+                    "disabled": false
+                },
+                "customfield_14748": null,
+                "customfield_14506": null,
+                "customfield_12569": null,
+                "customfield_15837": null,
+                "customfield_13536": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/customFieldOption/18931",
+                    "value": "STG/RE7/PREPROD",
+                    "id": "18931",
+                    "disabled": false
+                },
+                "customfield_13657": null,
+                "customfield_12568": null,
+                "customfield_14625": null,
+                "customfield_15835": null,
+                "customfield_13538": "This ticket type \"New request\" is obsolete! Please change the ticket type above ↑",
+                "customfield_14747": null,
+                "customfield_14626": null,
+                "customfield_15836": null,
+                "resolutiondate": "2025-04-08T07:58:32.000+0000",
+                "customfield_14509": null,
+                "watches": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/CDCFM-8985/watchers",
+                    "watchCount": 6,
+                    "isWatching": false
+                },
+                "customfield_11590": null,
+                "customfield_13650": null,
+                "customfield_13771": null,
+                "customfield_12561": null,
+                "customfield_13770": null,
+                "customfield_11471": null,
+                "customfield_15830": [],
+                "customfield_13652": null,
+                "customfield_13773": null,
+                "customfield_12563": null,
+                "customfield_13530": null,
+                "customfield_13651": null,
+                "customfield_12562": null,
+                "customfield_13772": null,
+                "customfield_13533": null,
+                "customfield_14502": null,
+                "customfield_12565": null,
+                "customfield_15833": null,
+                "customfield_13532": [
+                    "EMPTY"
+                ],
+                "customfield_13653": null,
+                "customfield_13774": null,
+                "customfield_14624": null,
+                "customfield_12564": null,
+                "customfield_15834": null,
+                "customfield_13535": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/customFieldOption/18885",
+                    "value": "FRANCE",
+                    "id": "18885",
+                    "disabled": false
+                },
+                "customfield_13656": null,
+                "customfield_11478": null,
+                "customfield_15831": [],
+                "customfield_13534": 1.0,
+                "customfield_14501": null,
+                "customfield_14622": null,
+                "customfield_11598": null,
+                "customfield_15832": null,
+                "customfield_13526": null,
+                "customfield_13647": null,
+                "customfield_13768": null,
+                "customfield_14616": null,
+                "customfield_11469": null,
+                "customfield_13525": null,
+                "customfield_13767": null,
+                "customfield_13528": null,
+                "customfield_13527": null,
+                "customfield_12559": null,
+                "customfield_13648": null,
+                "customfield_13529": null,
+                "customfield_14618": null,
+                "updated": "2025-07-01T05:12:54.000+0000",
+                "customfield_10490": null,
+                "timeoriginalestimate": null,
+                "customfield_11461": null,
+                "customfield_12550": null,
+                "customfield_11582": null,
+                "description": null,
+                "customfield_13520": null,
+                "customfield_10494": null,
+                "customfield_11584": null,
+                "customfield_13641": null,
+                "customfield_12551": null,
+                "customfield_10495": null,
+                "customfield_13522": null,
+                "customfield_12554": null,
+                "customfield_13643": null,
+                "customfield_13764": null,
+                "customfield_10496": null,
+                "customfield_13521": null,
+                "customfield_10497": null,
+                "customfield_13642": null,
+                "customfield_13524": null,
+                "customfield_11588": null,
+                "customfield_10498": null,
+                "customfield_13766": null,
+                "customfield_13523": null,
+                "customfield_10499": null,
+                "customfield_13644": null,
+                "customfield_13765": null,
+                "customfield_10489": null,
+                "customfield_12789": null,
+                "customfield_15815": null,
+                "customfield_12546": null,
+                "customfield_12304": null,
+                "customfield_12788": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/customFieldOption/16525",
+                    "value": "12_Navigation",
+                    "id": "16525",
+                    "disabled": false
+                },
+                "customfield_15816": null,
+                "customfield_13638": null,
+                "customfield_12307": null,
+                "customfield_13637": null,
+                "customfield_12306": null,
+                "customfield_13519": null,
+                "customfield_13639": null,
+                "customfield_13518": null,
+                "customfield_14608": null,
+                "summary": "[API] [Navigation][Intelligent-E] Added a new CAN signal of HVbatHeatingStateIcon",
+                "customfield_10481": null,
+                "customfield_10482": null,
+                "customfield_12541": null,
+                "customfield_10483": null,
+                "customfield_10484": null,
+                "customfield_10000": "{summaryBean=com.atlassian.jira.plugin.devstatus.rest.SummaryBean@b2867a[summary={pullrequest=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@6c7f77f1[byInstanceType={},overall=PullRequestOverallBean{stateCount=0, state='OPEN', details=PullRequestOverallDetails{openCount=0, mergedCount=0, declinedCount=0}}], build=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@2dc5c1d7[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.BuildOverallBean@3a92fb61[failedBuildCount=0,successfulBuildCount=0,unknownBuildCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], review=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@1b2c10a6[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.ReviewsOverallBean@22cbc40b[dueDate=<null>,overDue=false,state=<null>,stateCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], deployment-environment=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@210372fc[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.DeploymentOverallBean@c67cc4e[showProjects=false,successfulCount=0,topEnvironments=[],count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], repository=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@77b54444[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.CommitOverallBean@b223d25[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], branch=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@318c3a2f[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.BranchOverallBean@3bb85ec[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]]},configErrors=[],errors=[]], devSummaryJson={\"cachedValue\":{\"errors\":[],\"configErrors\":[],\"summary\":{\"pullrequest\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":\"OPEN\",\"details\":{\"openCount\":0,\"mergedCount\":0,\"declinedCount\":0,\"total\":0},\"open\":true},\"byInstanceType\":{}},\"build\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"failedBuildCount\":0,\"successfulBuildCount\":0,\"unknownBuildCount\":0},\"byInstanceType\":{}},\"review\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":null,\"dueDate\":null,\"overDue\":false,\"completed\":false},\"byInstanceType\":{}},\"deployment-environment\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"topEnvironments\":[],\"showProjects\":false,\"successfulCount\":0},\"byInstanceType\":{}},\"repository\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}},\"branch\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}}}},\"isStale\":false}}",
+                "customfield_13511": null,
+                "customfield_12785": null,
+                "customfield_10485": null,
+                "customfield_12543": null,
+                "customfield_13510": null,
+                "customfield_10486": null,
+                "customfield_12542": null,
+                "customfield_14602": null,
+                "customfield_13752": null,
+                "customfield_13634": null,
+                "customfield_13513": null,
+                "customfield_10487": null,
+                "customfield_12787": [
+                    "LGeAgreed",
+                    "NH-InfoEV"
+                ],
+                "customfield_12545": null,
+                "customfield_13512": null,
+                "customfield_10488": null,
+                "customfield_12786": null,
+                "customfield_12302": null,
+                "customfield_12544": null,
+                "customfield_14600": null,
+                "customfield_10478": null,
+                "customfield_12536": null,
+                "customfield_12535": null,
+                "customfield_10479": null,
+                "customfield_12538": null,
+                "customfield_13508": null,
+                "customfield_13507": null,
+                "customfield_12539": null,
+                "customfield_13509": null,
+                "comment": {
+                    "comments": [
+                        {
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/548118/comment/1375927",
+                            "id": "1375927",
+                            "author": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=LGEJ-LGEJ109",
+                                "name": "LGEJ-LGEJ109",
+                                "key": "JIRAUSER15130",
+                                "emailAddress": "dan.tran@lge.com",
+                                "avatarUrls": {
+                                    "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?ownerId=JIRAUSER15130&avatarId=14806",
+                                    "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&ownerId=JIRAUSER15130&avatarId=14806"
+                                },
+                                "displayName": "TRAN THE DAN",
+                                "active": true,
+                                "timeZone": "Asia/Ho_Chi_Minh"
+                            },
+                            "body": "Hello [~NBWA2711116] \r\n\r\nI create this ticket to discuss API for the HVbatHeatingStateIcon",
+                            "updateAuthor": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=LGEJ-LGEJ109",
+                                "name": "LGEJ-LGEJ109",
+                                "key": "JIRAUSER15130",
+                                "emailAddress": "dan.tran@lge.com",
+                                "avatarUrls": {
+                                    "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?ownerId=JIRAUSER15130&avatarId=14806",
+                                    "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&ownerId=JIRAUSER15130&avatarId=14806"
+                                },
+                                "displayName": "TRAN THE DAN",
+                                "active": true,
+                                "timeZone": "Asia/Ho_Chi_Minh"
+                            },
+                            "created": "2025-01-09T03:38:37.227+0000",
+                            "updated": "2025-01-09T03:38:37.227+0000"
+                        },
+                        {
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/548118/comment/1378416",
+                            "id": "1378416",
+                            "author": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=LGEJ-LGEJ109",
+                                "name": "LGEJ-LGEJ109",
+                                "key": "JIRAUSER15130",
+                                "emailAddress": "dan.tran@lge.com",
+                                "avatarUrls": {
+                                    "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?ownerId=JIRAUSER15130&avatarId=14806",
+                                    "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&ownerId=JIRAUSER15130&avatarId=14806"
+                                },
+                                "displayName": "TRAN THE DAN",
+                                "active": true,
+                                "timeZone": "Asia/Ho_Chi_Minh"
+                            },
+                            "body": "Hello [~NBWA2711116] [~TTC01492] \r\n\r\nCan you propose required API for the HVbatHeatingStateIcon?",
+                            "updateAuthor": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=LGEJ-LGEJ109",
+                                "name": "LGEJ-LGEJ109",
+                                "key": "JIRAUSER15130",
+                                "emailAddress": "dan.tran@lge.com",
+                                "avatarUrls": {
+                                    "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?ownerId=JIRAUSER15130&avatarId=14806",
+                                    "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&ownerId=JIRAUSER15130&avatarId=14806"
+                                },
+                                "displayName": "TRAN THE DAN",
+                                "active": true,
+                                "timeZone": "Asia/Ho_Chi_Minh"
+                            },
+                            "created": "2025-01-10T08:20:35.998+0000",
+                            "updated": "2025-01-10T08:42:56.754+0000"
+                        },
+                        {
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/548118/comment/2142926",
+                            "id": "2142926",
+                            "author": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=TTC01509",
+                                "name": "TTC01509",
+                                "key": "JIRAUSER15006",
+                                "emailAddress": "ashokkumar-nelepalli@mail.nissan.co.jp",
+                                "avatarUrls": {
+                                    "48x48": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=48",
+                                    "24x24": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=24",
+                                    "16x16": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=16",
+                                    "32x32": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=32"
+                                },
+                                "displayName": "ASHOKKUMAR NELEPALLI",
+                                "active": false,
+                                "timeZone": "UTC"
+                            },
+                            "body": "Dear [~LGEJ-LGEJ109] San,\r\n\r\nWe have created following API No {*}\"InfoEV_API_176\"{*}, Please find latest attachment \"SWD-CCS2EVO-00313-InfoEV_0.27.03.xlsx\" in below ticket and let us know in case of any concerns and also confirm API release plan from LG\r\n\r\nhttps://spaws.jp.nissan.biz/jira/browse/CDCFM-8625",
+                            "updateAuthor": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=TTC01509",
+                                "name": "TTC01509",
+                                "key": "JIRAUSER15006",
+                                "emailAddress": "ashokkumar-nelepalli@mail.nissan.co.jp",
+                                "avatarUrls": {
+                                    "48x48": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=48",
+                                    "24x24": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=24",
+                                    "16x16": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=16",
+                                    "32x32": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=32"
+                                },
+                                "displayName": "ASHOKKUMAR NELEPALLI",
+                                "active": false,
+                                "timeZone": "UTC"
+                            },
+                            "created": "2025-01-13T05:18:39.889+0000",
+                            "updated": "2025-01-13T05:18:39.889+0000"
+                        },
+                        {
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/548118/comment/2143114",
+                            "id": "2143114",
+                            "author": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=LGEJ-LGEJ109",
+                                "name": "LGEJ-LGEJ109",
+                                "key": "JIRAUSER15130",
+                                "emailAddress": "dan.tran@lge.com",
+                                "avatarUrls": {
+                                    "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?ownerId=JIRAUSER15130&avatarId=14806",
+                                    "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&ownerId=JIRAUSER15130&avatarId=14806"
+                                },
+                                "displayName": "TRAN THE DAN",
+                                "active": true,
+                                "timeZone": "Asia/Ho_Chi_Minh"
+                            },
+                            "body": "Hello [~TTC01509] -san,\r\n\r\nThis is khanh.hoang.\r\n\r\nThank you for your response.\r\n\r\nI see that you defined a getter API for this CRQ.\r\n\r\n!image-2025-01-13-13-56-58-232.png|width=792,height=60!\r\n\r\nHowever, according to our LGE Architect, all getter APIs have been deprecated to reduce complexity and IPC messaging between HMI vs FRW, (except getCapability for configuration values).\r\n\r\nIn this context, we propose using a callback. ex: IPreheatingStateListener.onHvBatHeatingStateIconChange(boolean)\r\n\r\nBelow is the REQ for using callback instead of getter.\r\n\r\n!image-2025-01-13-13-58-12-844.png|width=684,height=220!\r\n\r\nFor the API release plan, we need to align tasks before confirming. We will notify you as soon as possible.",
+                            "updateAuthor": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=LGEJ-LGEJ109",
+                                "name": "LGEJ-LGEJ109",
+                                "key": "JIRAUSER15130",
+                                "emailAddress": "dan.tran@lge.com",
+                                "avatarUrls": {
+                                    "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?ownerId=JIRAUSER15130&avatarId=14806",
+                                    "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&ownerId=JIRAUSER15130&avatarId=14806"
+                                },
+                                "displayName": "TRAN THE DAN",
+                                "active": true,
+                                "timeZone": "Asia/Ho_Chi_Minh"
+                            },
+                            "created": "2025-01-13T07:18:09.576+0000",
+                            "updated": "2025-01-13T09:12:14.206+0000"
+                        },
+                        {
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/548118/comment/2143272",
+                            "id": "2143272",
+                            "author": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=TTC01509",
+                                "name": "TTC01509",
+                                "key": "JIRAUSER15006",
+                                "emailAddress": "ashokkumar-nelepalli@mail.nissan.co.jp",
+                                "avatarUrls": {
+                                    "48x48": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=48",
+                                    "24x24": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=24",
+                                    "16x16": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=16",
+                                    "32x32": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=32"
+                                },
+                                "displayName": "ASHOKKUMAR NELEPALLI",
+                                "active": false,
+                                "timeZone": "UTC"
+                            },
+                            "body": "Dear [~LGEJ-LGEJ109] -San,\r\n\r\nThank you for update, For the same updated and attached \"SWD-CCS2EVO-00313-InfoEV_0.27.04.xlsx\" in below ticket. \r\nhttps://spaws.jp.nissan.biz/jira/browse/CDCFM-8625\r\n\r\nIf any concerns please let us know and also share API release plan ",
+                            "updateAuthor": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=TTC01509",
+                                "name": "TTC01509",
+                                "key": "JIRAUSER15006",
+                                "emailAddress": "ashokkumar-nelepalli@mail.nissan.co.jp",
+                                "avatarUrls": {
+                                    "48x48": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=48",
+                                    "24x24": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=24",
+                                    "16x16": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=16",
+                                    "32x32": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=32"
+                                },
+                                "displayName": "ASHOKKUMAR NELEPALLI",
+                                "active": false,
+                                "timeZone": "UTC"
+                            },
+                            "created": "2025-01-13T08:59:37.548+0000",
+                            "updated": "2025-01-13T08:59:37.548+0000"
+                        },
+                        {
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/548118/comment/2144689",
+                            "id": "2144689",
+                            "author": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=TTC01509",
+                                "name": "TTC01509",
+                                "key": "JIRAUSER15006",
+                                "emailAddress": "ashokkumar-nelepalli@mail.nissan.co.jp",
+                                "avatarUrls": {
+                                    "48x48": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=48",
+                                    "24x24": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=24",
+                                    "16x16": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=16",
+                                    "32x32": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=32"
+                                },
+                                "displayName": "ASHOKKUMAR NELEPALLI",
+                                "active": false,
+                                "timeZone": "UTC"
+                            },
+                            "body": "Dear [~LGEJ-LGEJ109] -San,\r\n\r\nPlease confirm LG agreed Label and API release plan ",
+                            "updateAuthor": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=TTC01509",
+                                "name": "TTC01509",
+                                "key": "JIRAUSER15006",
+                                "emailAddress": "ashokkumar-nelepalli@mail.nissan.co.jp",
+                                "avatarUrls": {
+                                    "48x48": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=48",
+                                    "24x24": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=24",
+                                    "16x16": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=16",
+                                    "32x32": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=32"
+                                },
+                                "displayName": "ASHOKKUMAR NELEPALLI",
+                                "active": false,
+                                "timeZone": "UTC"
+                            },
+                            "created": "2025-01-14T09:51:20.225+0000",
+                            "updated": "2025-01-14T09:51:20.225+0000"
+                        },
+                        {
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/548118/comment/2145803",
+                            "id": "2145803",
+                            "author": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=TTC01509",
+                                "name": "TTC01509",
+                                "key": "JIRAUSER15006",
+                                "emailAddress": "ashokkumar-nelepalli@mail.nissan.co.jp",
+                                "avatarUrls": {
+                                    "48x48": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=48",
+                                    "24x24": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=24",
+                                    "16x16": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=16",
+                                    "32x32": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=32"
+                                },
+                                "displayName": "ASHOKKUMAR NELEPALLI",
+                                "active": false,
+                                "timeZone": "UTC"
+                            },
+                            "body": "Dear [~LGEJ-LGEJ109] -San,\r\n\r\nPlease confirm the API release plan from LG",
+                            "updateAuthor": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=TTC01509",
+                                "name": "TTC01509",
+                                "key": "JIRAUSER15006",
+                                "emailAddress": "ashokkumar-nelepalli@mail.nissan.co.jp",
+                                "avatarUrls": {
+                                    "48x48": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=48",
+                                    "24x24": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=24",
+                                    "16x16": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=16",
+                                    "32x32": "https://www.gravatar.com/avatar/cf1e985d566993d963317687c174500f?d=mm&s=32"
+                                },
+                                "displayName": "ASHOKKUMAR NELEPALLI",
+                                "active": false,
+                                "timeZone": "UTC"
+                            },
+                            "created": "2025-01-15T05:46:43.313+0000",
+                            "updated": "2025-01-15T05:46:43.313+0000"
+                        },
+                        {
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/548118/comment/2146093",
+                            "id": "2146093",
+                            "author": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=LGEJ-LGEJ109",
+                                "name": "LGEJ-LGEJ109",
+                                "key": "JIRAUSER15130",
+                                "emailAddress": "dan.tran@lge.com",
+                                "avatarUrls": {
+                                    "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?ownerId=JIRAUSER15130&avatarId=14806",
+                                    "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&ownerId=JIRAUSER15130&avatarId=14806"
+                                },
+                                "displayName": "TRAN THE DAN",
+                                "active": true,
+                                "timeZone": "Asia/Ho_Chi_Minh"
+                            },
+                            "body": "Hello [~TTC01509] -san,\r\n\r\nThis is khanh.hoang.\r\n\r\nThe release plan needs to be confirmed by HQ and Nissan before filling to ticket.\r\n\r\nCurrently, we pushed the est plan to HQ.\r\n\r\nThe next step is processing.\r\n\r\nFor any update, i'll notify you.\r\n\r\n ",
+                            "updateAuthor": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=LGEJ-LGEJ109",
+                                "name": "LGEJ-LGEJ109",
+                                "key": "JIRAUSER15130",
+                                "emailAddress": "dan.tran@lge.com",
+                                "avatarUrls": {
+                                    "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?ownerId=JIRAUSER15130&avatarId=14806",
+                                    "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&ownerId=JIRAUSER15130&avatarId=14806"
+                                },
+                                "displayName": "TRAN THE DAN",
+                                "active": true,
+                                "timeZone": "Asia/Ho_Chi_Minh"
+                            },
+                            "created": "2025-01-15T07:39:31.929+0000",
+                            "updated": "2025-01-15T07:39:31.929+0000"
+                        },
+                        {
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/548118/comment/2146658",
+                            "id": "2146658",
+                            "author": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=EEL00884",
+                                "name": "EEL00884",
+                                "key": "JIRAUSER21108",
+                                "emailAddress": "ichikawa-h@mail.nissan.co.jp",
+                                "avatarUrls": {
+                                    "48x48": "https://www.gravatar.com/avatar/ee7a05f5d5c3270cb6dca4f71ab74d82?d=mm&s=48",
+                                    "24x24": "https://www.gravatar.com/avatar/ee7a05f5d5c3270cb6dca4f71ab74d82?d=mm&s=24",
+                                    "16x16": "https://www.gravatar.com/avatar/ee7a05f5d5c3270cb6dca4f71ab74d82?d=mm&s=16",
+                                    "32x32": "https://www.gravatar.com/avatar/ee7a05f5d5c3270cb6dca4f71ab74d82?d=mm&s=32"
+                                },
+                                "displayName": "HIROYUKI ICHIKAWA",
+                                "active": false,
+                                "timeZone": "UTC"
+                            },
+                            "body": "Hi [~LGEJ-LGEJ109] -san,\r\n\r\nNext PIP meeting is set from 2:00 pm JST tomorrow.\r\nWe must report the plan of all EPIC tickets.\r\nSo please follow HQ again.\r\nIf you have any points that I can support, please let me know.\r\nThank you.",
+                            "updateAuthor": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=EEL00884",
+                                "name": "EEL00884",
+                                "key": "JIRAUSER21108",
+                                "emailAddress": "ichikawa-h@mail.nissan.co.jp",
+                                "avatarUrls": {
+                                    "48x48": "https://www.gravatar.com/avatar/ee7a05f5d5c3270cb6dca4f71ab74d82?d=mm&s=48",
+                                    "24x24": "https://www.gravatar.com/avatar/ee7a05f5d5c3270cb6dca4f71ab74d82?d=mm&s=24",
+                                    "16x16": "https://www.gravatar.com/avatar/ee7a05f5d5c3270cb6dca4f71ab74d82?d=mm&s=16",
+                                    "32x32": "https://www.gravatar.com/avatar/ee7a05f5d5c3270cb6dca4f71ab74d82?d=mm&s=32"
+                                },
+                                "displayName": "HIROYUKI ICHIKAWA",
+                                "active": false,
+                                "timeZone": "UTC"
+                            },
+                            "created": "2025-01-15T11:55:30.173+0000",
+                            "updated": "2025-01-15T11:55:30.173+0000"
+                        },
+                        {
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/548118/comment/2147375",
+                            "id": "2147375",
+                            "author": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=EEL00792",
+                                "name": "EEL00792",
+                                "key": "JIRAUSER16128",
+                                "emailAddress": "kento-kodaka@mail.nissan.co.jp",
+                                "avatarUrls": {
+                                    "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?avatarId=10346",
+                                    "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&avatarId=10346",
+                                    "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&avatarId=10346",
+                                    "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&avatarId=10346"
+                                },
+                                "displayName": "KENTO KODAKA",
+                                "active": false,
+                                "timeZone": "UTC"
+                            },
+                            "body": "[~N206035] san LGE side needs CRQ. could you confirm this point?\r\nCC [~EEL00884] san [~LGEJ-LGEJ109] san",
+                            "updateAuthor": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=EEL00792",
+                                "name": "EEL00792",
+                                "key": "JIRAUSER16128",
+                                "emailAddress": "kento-kodaka@mail.nissan.co.jp",
+                                "avatarUrls": {
+                                    "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?avatarId=10346",
+                                    "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&avatarId=10346",
+                                    "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&avatarId=10346",
+                                    "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&avatarId=10346"
+                                },
+                                "displayName": "KENTO KODAKA",
+                                "active": false,
+                                "timeZone": "UTC"
+                            },
+                            "created": "2025-01-16T05:53:11.880+0000",
+                            "updated": "2025-01-16T05:53:11.880+0000"
+                        },
+                        {
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/548118/comment/2147436",
+                            "id": "2147436",
+                            "author": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=EEL00792",
+                                "name": "EEL00792",
+                                "key": "JIRAUSER16128",
+                                "emailAddress": "kento-kodaka@mail.nissan.co.jp",
+                                "avatarUrls": {
+                                    "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?avatarId=10346",
+                                    "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&avatarId=10346",
+                                    "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&avatarId=10346",
+                                    "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&avatarId=10346"
+                                },
+                                "displayName": "KENTO KODAKA",
+                                "active": false,
+                                "timeZone": "UTC"
+                            },
+                            "body": "[~LGEJ-LGEJ109] san will share the temporally plan and in paralell [~LGEJ-LGEJ109] san will check with [~LGEJ-LGEJ11] san for CRQ",
+                            "updateAuthor": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=EEL00792",
+                                "name": "EEL00792",
+                                "key": "JIRAUSER16128",
+                                "emailAddress": "kento-kodaka@mail.nissan.co.jp",
+                                "avatarUrls": {
+                                    "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?avatarId=10346",
+                                    "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&avatarId=10346",
+                                    "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&avatarId=10346",
+                                    "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&avatarId=10346"
+                                },
+                                "displayName": "KENTO KODAKA",
+                                "active": false,
+                                "timeZone": "UTC"
+                            },
+                            "created": "2025-01-16T06:17:43.584+0000",
+                            "updated": "2025-01-16T06:17:43.584+0000"
+                        },
+                        {
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/548118/comment/2147947",
+                            "id": "2147947",
+                            "author": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=LGEJ-LGEJ109",
+                                "name": "LGEJ-LGEJ109",
+                                "key": "JIRAUSER15130",
+                                "emailAddress": "dan.tran@lge.com",
+                                "avatarUrls": {
+                                    "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?ownerId=JIRAUSER15130&avatarId=14806",
+                                    "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&ownerId=JIRAUSER15130&avatarId=14806"
+                                },
+                                "displayName": "TRAN THE DAN",
+                                "active": true,
+                                "timeZone": "Asia/Ho_Chi_Minh"
+                            },
+                            "body": "Hello [~EEL00792] san, [~EEL00884] san\r\n\r\nI put the release plan as sprint 3: IRI.25.03.03",
+                            "updateAuthor": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=LGEJ-LGEJ109",
+                                "name": "LGEJ-LGEJ109",
+                                "key": "JIRAUSER15130",
+                                "emailAddress": "dan.tran@lge.com",
+                                "avatarUrls": {
+                                    "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?ownerId=JIRAUSER15130&avatarId=14806",
+                                    "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&ownerId=JIRAUSER15130&avatarId=14806"
+                                },
+                                "displayName": "TRAN THE DAN",
+                                "active": true,
+                                "timeZone": "Asia/Ho_Chi_Minh"
+                            },
+                            "created": "2025-01-16T10:25:48.393+0000",
+                            "updated": "2025-01-16T10:25:48.393+0000"
+                        },
+                        {
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/548118/comment/2149463",
+                            "id": "2149463",
+                            "author": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=EEL00792",
+                                "name": "EEL00792",
+                                "key": "JIRAUSER16128",
+                                "emailAddress": "kento-kodaka@mail.nissan.co.jp",
+                                "avatarUrls": {
+                                    "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?avatarId=10346",
+                                    "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&avatarId=10346",
+                                    "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&avatarId=10346",
+                                    "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&avatarId=10346"
+                                },
+                                "displayName": "KENTO KODAKA",
+                                "active": false,
+                                "timeZone": "UTC"
+                            },
+                            "body": "[~LGEJ-LGEJ109] san thank you for update!",
+                            "updateAuthor": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=EEL00792",
+                                "name": "EEL00792",
+                                "key": "JIRAUSER16128",
+                                "emailAddress": "kento-kodaka@mail.nissan.co.jp",
+                                "avatarUrls": {
+                                    "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?avatarId=10346",
+                                    "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&avatarId=10346",
+                                    "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&avatarId=10346",
+                                    "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&avatarId=10346"
+                                },
+                                "displayName": "KENTO KODAKA",
+                                "active": false,
+                                "timeZone": "UTC"
+                            },
+                            "created": "2025-01-17T09:16:13.877+0000",
+                            "updated": "2025-01-17T09:16:13.877+0000"
+                        },
+                        {
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/548118/comment/2153676",
+                            "id": "2153676",
+                            "author": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=LGEJ-LGEJ109",
+                                "name": "LGEJ-LGEJ109",
+                                "key": "JIRAUSER15130",
+                                "emailAddress": "dan.tran@lge.com",
+                                "avatarUrls": {
+                                    "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?ownerId=JIRAUSER15130&avatarId=14806",
+                                    "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&ownerId=JIRAUSER15130&avatarId=14806"
+                                },
+                                "displayName": "TRAN THE DAN",
+                                "active": true,
+                                "timeZone": "Asia/Ho_Chi_Minh"
+                            },
+                            "body": "Hello [~n199398] san\r\n\r\nAs CDCFM-6970 EPIC has postponed to PI26, I changed the API release plan",
+                            "updateAuthor": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=LGEJ-LGEJ109",
+                                "name": "LGEJ-LGEJ109",
+                                "key": "JIRAUSER15130",
+                                "emailAddress": "dan.tran@lge.com",
+                                "avatarUrls": {
+                                    "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?ownerId=JIRAUSER15130&avatarId=14806",
+                                    "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&ownerId=JIRAUSER15130&avatarId=14806",
+                                    "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&ownerId=JIRAUSER15130&avatarId=14806"
+                                },
+                                "displayName": "TRAN THE DAN",
+                                "active": true,
+                                "timeZone": "Asia/Ho_Chi_Minh"
+                            },
+                            "created": "2025-01-21T08:08:12.269+0000",
+                            "updated": "2025-01-21T08:08:12.269+0000"
+                        },
+                        {
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/548118/comment/2153949",
+                            "id": "2153949",
+                            "author": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=NBWA2711116",
+                                "name": "NBWA2711116",
+                                "key": "JIRAUSER21221",
+                                "emailAddress": "mehra.damini@tcs.com",
+                                "avatarUrls": {
+                                    "48x48": "https://www.gravatar.com/avatar/029218dd8b2bdde8e5abf06ad8c1ba4f?d=mm&s=48",
+                                    "24x24": "https://www.gravatar.com/avatar/029218dd8b2bdde8e5abf06ad8c1ba4f?d=mm&s=24",
+                                    "16x16": "https://www.gravatar.com/avatar/029218dd8b2bdde8e5abf06ad8c1ba4f?d=mm&s=16",
+                                    "32x32": "https://www.gravatar.com/avatar/029218dd8b2bdde8e5abf06ad8c1ba4f?d=mm&s=32"
+                                },
+                                "displayName": "DAMINI MEHRA",
+                                "active": true,
+                                "timeZone": "Asia/Kolkata"
+                            },
+                            "body": "Dear [~LGEJ-LGEJ109] San, \r\n\r\nCould you let me know when we will receive the skeleton code or our local implementation?\r\n\r\nRegards.\r\n\r\n ",
+                            "updateAuthor": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=NBWA2711116",
+                                "name": "NBWA2711116",
+                                "key": "JIRAUSER21221",
+                                "emailAddress": "mehra.damini@tcs.com",
+                                "avatarUrls": {
+                                    "48x48": "https://www.gravatar.com/avatar/029218dd8b2bdde8e5abf06ad8c1ba4f?d=mm&s=48",
+                                    "24x24": "https://www.gravatar.com/avatar/029218dd8b2bdde8e5abf06ad8c1ba4f?d=mm&s=24",
+                                    "16x16": "https://www.gravatar.com/avatar/029218dd8b2bdde8e5abf06ad8c1ba4f?d=mm&s=16",
+                                    "32x32": "https://www.gravatar.com/avatar/029218dd8b2bdde8e5abf06ad8c1ba4f?d=mm&s=32"
+                                },
+                                "displayName": "DAMINI MEHRA",
+                                "active": true,
+                                "timeZone": "Asia/Kolkata"
+                            },
+                            "created": "2025-01-21T10:03:44.885+0000",
+                            "updated": "2025-01-21T10:14:26.824+0000"
+                        },
+                        {
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/548118/comment/2263671",
+                            "id": "2263671",
+                            "author": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=n199398",
+                                "name": "n199398",
+                                "key": "n199398",
+                                "emailAddress": "konomi-masuda@mail.nissan.co.jp",
+                                "avatarUrls": {
+                                    "48x48": "https://www.gravatar.com/avatar/1be66b093aba91cdd2a5d36b8fdb8852?d=mm&s=48",
+                                    "24x24": "https://www.gravatar.com/avatar/1be66b093aba91cdd2a5d36b8fdb8852?d=mm&s=24",
+                                    "16x16": "https://www.gravatar.com/avatar/1be66b093aba91cdd2a5d36b8fdb8852?d=mm&s=16",
+                                    "32x32": "https://www.gravatar.com/avatar/1be66b093aba91cdd2a5d36b8fdb8852?d=mm&s=32"
+                                },
+                                "displayName": "MASUDA, KONOMI",
+                                "active": true,
+                                "timeZone": "UTC"
+                            },
+                            "body": "Dear [~LGEJ-LGEJ109]-san\r\nThis EPIC is moved to next  PI so please close it,\r\n",
+                            "updateAuthor": {
+                                "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=n199398",
+                                "name": "n199398",
+                                "key": "n199398",
+                                "emailAddress": "konomi-masuda@mail.nissan.co.jp",
+                                "avatarUrls": {
+                                    "48x48": "https://www.gravatar.com/avatar/1be66b093aba91cdd2a5d36b8fdb8852?d=mm&s=48",
+                                    "24x24": "https://www.gravatar.com/avatar/1be66b093aba91cdd2a5d36b8fdb8852?d=mm&s=24",
+                                    "16x16": "https://www.gravatar.com/avatar/1be66b093aba91cdd2a5d36b8fdb8852?d=mm&s=16",
+                                    "32x32": "https://www.gravatar.com/avatar/1be66b093aba91cdd2a5d36b8fdb8852?d=mm&s=32"
+                                },
+                                "displayName": "MASUDA, KONOMI",
+                                "active": true,
+                                "timeZone": "UTC"
+                            },
+                            "created": "2025-04-04T05:29:32.751+0000",
+                            "updated": "2025-04-04T05:29:32.751+0000"
+                        }
+                    ],
+                    "maxResults": 1000,
+                    "total": 16,
+                    "startAt": 0
+                },
+                "fixVersions": [],
+                "customfield_15352": null,
+                "customfield_16200": null,
+                "customfield_15353": null,
+                "customfield_15351": null,
+                "customfield_15356": null,
+                "customfield_18746": null,
+                "customfield_15115": null,
+                "customfield_15354": null,
+                "customfield_15355": null,
+                "priority": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/priority/10105",
+                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/priorities/blocker.svg",
+                    "name": "None",
+                    "id": "10105"
+                },
+                "customfield_15358": null,
+                "customfield_16689": null,
+                "customfield_18745": null,
+                "versions": [],
+                "customfield_16670": null,
+                "customfield_15330": null,
+                "customfield_16420": null,
+                "customfield_15331": null,
+                "customfield_15332": null,
+                "customfield_16421": null,
+                "aggregateprogress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "customfield_16669": null,
+                "customfield_15336": null,
+                "customfield_15329": null,
+                "customfield_16418": null,
+                "customfield_15323": null,
+                "customfield_15324": null,
+                "customfield_15322": null,
+                "customfield_15327": null,
+                "customfield_15328": null,
+                "customfield_15325": null,
+                "customfield_15326": null,
+                "created": "2025-01-09T03:36:42.000+0000",
+                "customfield_15310": null,
+                "customfield_15309": null,
+                "customfield_15307": null,
+                "customfield_15308": null,
+                "customfield_12150": null,
+                "customfield_12392": null,
+                "customfield_15786": null,
+                "customfield_15300": null,
+                "customfield_15305": null,
+                "customfield_15303": null,
+                "customfield_13118": null,
+                "customfield_16629": null,
+                "attachment": [
+                    {
+                        "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/attachment/1116046",
+                        "id": "1116046",
+                        "filename": "image-2025-01-13-13-55-46-253.png",
+                        "author": {
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=LGEJ-LGEJ109",
+                            "name": "LGEJ-LGEJ109",
+                            "key": "JIRAUSER15130",
+                            "emailAddress": "dan.tran@lge.com",
+                            "avatarUrls": {
+                                "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?ownerId=JIRAUSER15130&avatarId=14806",
+                                "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&ownerId=JIRAUSER15130&avatarId=14806",
+                                "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&ownerId=JIRAUSER15130&avatarId=14806",
+                                "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&ownerId=JIRAUSER15130&avatarId=14806"
+                            },
+                            "displayName": "TRAN THE DAN",
+                            "active": true,
+                            "timeZone": "Asia/Ho_Chi_Minh"
+                        },
+                        "created": "2025-01-13T06:55:46.580+0000",
+                        "size": 15209,
+                        "mimeType": "image/png",
+                        "content": "https://spaws.jp.nissan.biz/jira/secure/attachment/1116046/image-2025-01-13-13-55-46-253.png",
+                        "thumbnail": "https://spaws.jp.nissan.biz/jira/secure/thumbnail/1116046/_thumb_1116046.png"
+                    },
+                    {
+                        "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/attachment/1116048",
+                        "id": "1116048",
+                        "filename": "image-2025-01-13-13-56-32-581.png",
+                        "author": {
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=LGEJ-LGEJ109",
+                            "name": "LGEJ-LGEJ109",
+                            "key": "JIRAUSER15130",
+                            "emailAddress": "dan.tran@lge.com",
+                            "avatarUrls": {
+                                "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?ownerId=JIRAUSER15130&avatarId=14806",
+                                "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&ownerId=JIRAUSER15130&avatarId=14806",
+                                "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&ownerId=JIRAUSER15130&avatarId=14806",
+                                "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&ownerId=JIRAUSER15130&avatarId=14806"
+                            },
+                            "displayName": "TRAN THE DAN",
+                            "active": true,
+                            "timeZone": "Asia/Ho_Chi_Minh"
+                        },
+                        "created": "2025-01-13T06:56:32.902+0000",
+                        "size": 15209,
+                        "mimeType": "image/png",
+                        "content": "https://spaws.jp.nissan.biz/jira/secure/attachment/1116048/image-2025-01-13-13-56-32-581.png",
+                        "thumbnail": "https://spaws.jp.nissan.biz/jira/secure/thumbnail/1116048/_thumb_1116048.png"
+                    },
+                    {
+                        "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/attachment/1116049",
+                        "id": "1116049",
+                        "filename": "image-2025-01-13-13-56-58-232.png",
+                        "author": {
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=LGEJ-LGEJ109",
+                            "name": "LGEJ-LGEJ109",
+                            "key": "JIRAUSER15130",
+                            "emailAddress": "dan.tran@lge.com",
+                            "avatarUrls": {
+                                "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?ownerId=JIRAUSER15130&avatarId=14806",
+                                "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&ownerId=JIRAUSER15130&avatarId=14806",
+                                "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&ownerId=JIRAUSER15130&avatarId=14806",
+                                "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&ownerId=JIRAUSER15130&avatarId=14806"
+                            },
+                            "displayName": "TRAN THE DAN",
+                            "active": true,
+                            "timeZone": "Asia/Ho_Chi_Minh"
+                        },
+                        "created": "2025-01-13T06:56:58.607+0000",
+                        "size": 15209,
+                        "mimeType": "image/png",
+                        "content": "https://spaws.jp.nissan.biz/jira/secure/attachment/1116049/image-2025-01-13-13-56-58-232.png",
+                        "thumbnail": "https://spaws.jp.nissan.biz/jira/secure/thumbnail/1116049/_thumb_1116049.png"
+                    },
+                    {
+                        "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/attachment/1116050",
+                        "id": "1116050",
+                        "filename": "image-2025-01-13-13-58-12-844.png",
+                        "author": {
+                            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=LGEJ-LGEJ109",
+                            "name": "LGEJ-LGEJ109",
+                            "key": "JIRAUSER15130",
+                            "emailAddress": "dan.tran@lge.com",
+                            "avatarUrls": {
+                                "48x48": "https://spaws.jp.nissan.biz/jira/secure/useravatar?ownerId=JIRAUSER15130&avatarId=14806",
+                                "24x24": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=small&ownerId=JIRAUSER15130&avatarId=14806",
+                                "16x16": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=xsmall&ownerId=JIRAUSER15130&avatarId=14806",
+                                "32x32": "https://spaws.jp.nissan.biz/jira/secure/useravatar?size=medium&ownerId=JIRAUSER15130&avatarId=14806"
+                            },
+                            "displayName": "TRAN THE DAN",
+                            "active": true,
+                            "timeZone": "Asia/Ho_Chi_Minh"
+                        },
+                        "created": "2025-01-13T06:58:13.643+0000",
+                        "size": 59210,
+                        "mimeType": "image/png",
+                        "content": "https://spaws.jp.nissan.biz/jira/secure/attachment/1116050/image-2025-01-13-13-58-12-844.png",
+                        "thumbnail": "https://spaws.jp.nissan.biz/jira/secure/thumbnail/1116050/_thumb_1116050.png"
+                    }
+                ],
+                "customfield_13591": null,
+                "customfield_13590": null,
+                "customfield_12383": null,
+                "customfield_13592": null,
+                "customfield_13111": null,
+                "customfield_14565": null,
+                "customfield_13110": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/customFieldOption/36067",
+                    "value": "IRI26.01.03",
+                    "id": "36067",
+                    "disabled": false
+                },
+                "customfield_13594": null,
+                "customfield_13113": null,
+                "customfield_13597": null,
+                "customfield_13112": null,
+                "customfield_13596": null,
+                "customfield_13114": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/customFieldOption/17488",
+                    "value": "LGE",
+                    "id": "17488",
+                    "disabled": false
+                },
+                "customfield_13598": null,
+                "customfield_13238": null,
+                "customfield_13237": "dan.tran@lge.com",
+                "customfield_13108": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/customFieldOption/36369",
+                    "value": "IRI26.01.03",
+                    "id": "36369",
+                    "disabled": false
+                },
+                "customfield_13107": null,
+                "customfield_13109": null
+            },
+            "renderedFields": null
+        }
+    ],
+    "warningMessages": null,
+    "names": null,
+    "schema": null
+}

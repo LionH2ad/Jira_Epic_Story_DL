@@ -1,0 +1,86 @@
+{
+    "issues": [
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+            "id": "792062",
+            "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issue/792062",
+            "key": "CDCFM-17626",
+            "fields": {
+                "summary": "CS_05_ControlPanel_CAN_Sequence",
+                "issuetype": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/issuetype/10000",
+                    "id": "10000",
+                    "description": "Created by Jira Software - do not edit or delete. Issue type for a big user story that needs to be broken down.",
+                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/issuetypes/epic.svg",
+                    "name": "Epic",
+                    "subtask": false
+                },
+                "created": "2025-10-24T09:54:09.000+0000",
+                "customfield_10481": "CRQ-L057",
+                "customfield_13110": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/customFieldOption/36121",
+                    "value": "IRI30.03.03",
+                    "id": "36121",
+                    "disabled": false
+                },
+                "customfield_13112": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/customFieldOption/36157",
+                    "value": "IRI30.03.03",
+                    "id": "36157",
+                    "disabled": false
+                },
+                "priority": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/priority/10105",
+                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/priorities/blocker.svg",
+                    "name": "None",
+                    "id": "10105"
+                },
+                "customfield_13114": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/customFieldOption/17488",
+                    "value": "LGE",
+                    "id": "17488",
+                    "disabled": false
+                },
+                "customfield_13106": null,
+                "customfield_13108": null,
+                "customfield_12788": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/customFieldOption/16538",
+                    "value": "27_Control panel",
+                    "id": "16538",
+                    "disabled": false
+                },
+                "customfield_12539": "CS_05_ControlPanel_CAN_Sequence",
+                "assignee": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/user?username=LGEJ-LGEJ131",
+                    "name": "LGEJ-LGEJ131",
+                    "key": "JIRAUSER21852",
+                    "emailAddress": "thang2.le@lge.com",
+                    "avatarUrls": {
+                        "48x48": "https://www.gravatar.com/avatar/59ebe6056250e04c3cd0d9e2bd2183f4?d=mm&s=48",
+                        "24x24": "https://www.gravatar.com/avatar/59ebe6056250e04c3cd0d9e2bd2183f4?d=mm&s=24",
+                        "16x16": "https://www.gravatar.com/avatar/59ebe6056250e04c3cd0d9e2bd2183f4?d=mm&s=16",
+                        "32x32": "https://www.gravatar.com/avatar/59ebe6056250e04c3cd0d9e2bd2183f4?d=mm&s=32"
+                    },
+                    "displayName": "THANG VAN LE",
+                    "active": true,
+                    "timeZone": "UTC"
+                },
+                "status": {
+                    "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/status/11401",
+                    "description": "",
+                    "iconUrl": "https://spaws.jp.nissan.biz/jira/images/icons/statuses/generic.png",
+                    "name": "PLAN AGREED",
+                    "id": "11401",
+                    "statusCategory": {
+                        "self": "https://spaws.jp.nissan.biz/jira/rest/api/2/statuscategory/4",
+                        "id": 4,
+                        "key": "indeterminate",
+                        "colorName": "inprogress",
+                        "name": "In Progress"
+                    }
+                }
+            },
+            "renderedFields": null
+        }
+    ]
+}
