@@ -7,6 +7,7 @@ import urllib3
 import sys
 import io
 import os
+from dotenv import load_dotenv
 
 # 터미널 출력 인코딩을 UTF-8로 설정 (이모지 출력 가능하게 함)
 sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf-8')
@@ -15,7 +16,8 @@ sys.stderr = io.TextIOWrapper(sys.stderr.detach(), encoding='utf-8')
 # --- [설정 구간] ---
 JIRA_URL = "https://spaws.jp.nissan.biz/jira" # "https://nissan.biz" 
 USER_EMAIL = "LGEJ-LGEJ1028"
-API_TOKEN = "XfqfORtVR0asqJ7iWpB65EW8JuNknPl6TpYOkl"
+load_dotenv()
+API_TOKEN = os.getenv("MY_TOKEN")
 
 JQL_QUERY = "key = 'CDCFM-22853'" # "project = CDCFM AND type in (Epic, Story) AND created > 2026-03-06 ORDER BY id ASC" 
 MAX_RESULTS = 1000

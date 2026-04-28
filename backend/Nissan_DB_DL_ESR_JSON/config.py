@@ -2,12 +2,14 @@ import os
 import urllib3
 import sys
 import io
+from dotenv import load_dotenv
 
 
 class JiraConfig:
     URL = "https://spaws.jp.nissan.biz/jira"
     USER = "LGEJ-LGEJ1028"
-    TOKEN = "XfqfORtVR0asqJ7iWpB65EW8JuNknPl6TpYOkl"
+    load_dotenv()
+    TOKEN = os.getenv("MY_TOKEN")
 
     JQL = "key = 'CDCFM-17422'"
     # JQL = "project = CDCFM AND type in (Epic, Story) ORDER BY id ASC"
