@@ -26,7 +26,7 @@ class JiraFields:
 
     # 탭 4: 제외할 상태(Status) 목록
     EXCLUDE_STATUS_LIST = [
-        "CLOSE", "CLOSED", "Verified", "Rejected", 
+        "CLOSE", "CLOSED", "Verified", "Rejected", "Close", "Closed",
         "Validation Ok", "Validation NG", "PREPARING VALIDATION ENVIRONMENT"
     ]
 

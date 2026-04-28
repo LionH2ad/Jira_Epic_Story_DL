@@ -38,6 +38,7 @@ class JiraFields:
     SHEET_CRQ = "CRQ"
     SHEET_SECOND_SOP = "2nd_SOP"
     SHEET_EXEC = "Exec_Summary_Report"
+    SHEET_DBC = "DBC_File_List"
 
     MAX_COL_WIDTH = 70  # 최대 열 너비 제한
     DATE_FORMAT = "%Y-%m-%d" # 날짜 출력 형식
@@ -74,6 +75,9 @@ class JiraFields:
         "Count Child Jira": 8.38,
         "Labels": 120.0,
         "Executive Summary": 80.5,
+        "DBC File Name": 31.13,
+        "File Name": 31.13,
+        "URL": 47.13,
         # 여기에 필요한 컬럼명을 계속 추가하세요.
     }
     
