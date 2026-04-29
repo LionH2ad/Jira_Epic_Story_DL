@@ -1,5 +1,5 @@
 import re
-from constants import JiraFields
+from common.constants import JiraFields
 
 def get_value(field_data):
     """데이터가 없으면 공백 한 칸(" ")을 반환하는 함수"""
@@ -42,7 +42,7 @@ def clean_text(text):
 def parse_issue_info(issue):
     """Jira issue(JSON)에서 정제된 issue_info(Dict)를 추출합니다."""
     fields = issue.get("fields", {})
-    # links = fields.get('issuelinks', [])
+    links = fields.get('issuelinks', [])
     # 담당자(Assignee) 정보는 별도 처리
     assignee = fields.get('assignee') or {}
 
@@ -53,59 +53,29 @@ def parse_issue_info(issue):
     except:
         issue_id_num = None
 
-    # 첨부파일에서 .dbc 파일 찾기
-    attachments = fields.get("attachment", [])
-    dbc_filenames = []
-    for att in attachments:
-        filename = att.get("filename", "")
-        if filename.lower().endswith(".dbc"):
-            # 확장자 .dbc를 제거한 파일명 추출
-            clean_name = filename[:-4] if filename.lower().endswith(".dbc") else filename
-            dbc_filenames.append(clean_name)
-    
-    # [신규] AASP 관련 파일명 추출 로직
-    attachments = fields.get("attachment", [])
-    comments = fields.get("comment", {}).get("comments", [])
+    # 특정 링크(parent/child) 데이터 추출
+    outward_keys, inward_keys = [], []
+    for link in links:
+        # 링크 타입 이름 확인 (대소문자 구분 없이 체크하려면 .lower() 사용)
+        link_type_name = link.get('type', {}).get('name', "")
+        if link_type_name == "parent/child":
+            # Outward 이슈 키 추출
+            if 'outwardIssue' in link:
+                out_key = link.get('outwardIssue', {}).get('key')
+                if out_key: outward_keys.append(out_key)
+            # Inward 이슈 키 추출
+            if 'inwardIssue' in link:
+                in_key = link.get('inwardIssue', {}).get('key')
+                if in_key: inward_keys.append(in_key)
 
-    # 추출된 파일명들을 담을 리스트
-    extracted_items = []
+    # 1. 키 목록 문자열: 리스트에 값이 있으면 공백으로 합치고, 없으면 공백 한 칸(" ")
+    outward_str = " ".join(outward_keys) if outward_keys else " "
+    inward_str = " ".join(inward_keys) if inward_keys else " "
 
-    for att in attachments:
-        filename = att.get("filename", "")
-        if "AASP" in filename.upper():
-            clean_name = filename.split('|')[0].split('?')[0].strip()
-
-            if '.xlsx' in clean_name.lower():
-                clean_name = clean_name.lower().split('.xlsx')[0]
-
-            clean_name = clean_name.replace(']', '').strip()
-            
-            if clean_name:
-                extracted_items.append(clean_name)
-            
-    # 2. 댓글에서 찾기 (댓글 텍스트 내에 언급된 파일명이 있다면 수집)
-    # (SWD-|QA_) : SWD- 또는 QA_ 로 시작함
-    # [^\s,]+ : 그 뒤에 공백이나 쉼표가 아닌 문자들이 붙음
-    multi_pattern = r"(?:SWD-|QA_)[^\s,]+"
-    for cmt in comments:
-        body = cmt.get("body", "")
-        if "AASP" in body.upper():
-            found = re.findall(multi_pattern, body)
-            if found:
-                for item in found:
-                    # 정규표현식으로 1차 필터링을 했지만, 
-                    # 혹시 모를 잔여물(|나 ])을 한 번 더 제거합니다.
-                    clean_item = item.split('|')[0].split('?')[0].replace(']', '').strip()
-
-                    if '.xlsx' in clean_item.lower():
-                        idx = clean_item.lower().find('.xlsx')
-                        clean_item = clean_item[:idx]
-
-                    if 'aasp' in clean_item.lower():
-                        extracted_items.append(clean_item)
-
-    # 중복 제거 및 정렬
-    extracted_items = sorted(list(set(extracted_items)))
+    # [핵심 수정] Labels 데이터가 None(null)인 경우 빈 리스트([])로 강제 치환
+    raw_labels = fields.get(JiraFields.LABELS)
+    if not isinstance(raw_labels, list):
+        raw_labels = []
 
     # 모든 가공된 결과물을 하나의 주머니(dict)에 담기
     return {
@@ -124,15 +94,11 @@ def parse_issue_info(issue):
         "Assignee": assignee.get("name", ""),
         "Assignee_Email": get_value(fields.get(JiraFields.ASSIGNEE_EMAIL)),
         "CRQ_No": get_value(fields.get(JiraFields.CRQ_NO)),
-        # "Parent_Jira": inward_str,
-        # "Child_Jira": outward_str,
-        # "Count_Parent": len(inward_keys),
-        # "Count_Child": len(outward_keys),
-        # "Labels_Raw": raw_labels,  # 필터링용 리스트
-        # "Labels_Str": get_list_values(raw_labels), # 표시용 문자열
+        "Parent_Jira": inward_str,
+        "Child_Jira": outward_str,
+        "Count_Parent": len(inward_keys),
+        "Count_Child": len(outward_keys),
+        "Labels_Raw": raw_labels,  # 필터링용 리스트
+        "Labels_Str": get_list_values(raw_labels), # 표시용 문자열
         "Executive_Summary": get_value(fields.get(JiraFields.EXECUTIVE_SUMMARY)),
-        "Status": fields.get("status", {}).get("name"),
-        "DBC_Files": dbc_filenames, # .dbc가 제거된 파일명 리스트
-        "AASP_Combined_Items": extracted_items,
-        "Comments_Raw": comments, # 댓글 원문 필요 시 대비
     }

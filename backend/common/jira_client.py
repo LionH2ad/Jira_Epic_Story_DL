@@ -1,10 +1,10 @@
 import requests
 from requests.auth import HTTPBasicAuth
-from config import JiraConfig
-from constants import JiraFields
+from common.config import JiraConfig
+from common.constants import JiraFields
 
 
-def fetch_issues():
+def fetch_issues(jql):
     search_url = f"{JiraConfig.URL}/rest/api/2/search"
     auth = HTTPBasicAuth(JiraConfig.USER, JiraConfig.TOKEN)
     headers = {
@@ -15,15 +15,15 @@ def fetch_issues():
 
     all_issues = []
     start_at = 0
-    page_size = 10  # 한 번에 가져올 단위
+    # page_size = 1000  # 한 번에 가져올 단위
 
     while True:
         params = {
-            "jql": JiraConfig.JQL,
+            "jql": jql,
             "startAt": start_at,  # 시작 위치 지절
-            "maxResults": page_size,
-            # "fields": JiraFields.get_fields_string(),
-            "fields": "*all",
+            "maxResults": JiraConfig.PAGE_SIZE,
+            "fields": JiraFields.get_fields_string(),
+            # "fields": "*all",
         }
 
         print(f"데이터 가져오는 중... ({start_at}번부터 시작)")
@@ -37,6 +37,11 @@ def fetch_issues():
                 verify=False,
                 timeout=60,
             )
+
+            if response.status_code != 200:
+                print(f"Error: {response.status_code}, {response.text}")
+                break
+
             response.raise_for_status()
 
             data = response.json()

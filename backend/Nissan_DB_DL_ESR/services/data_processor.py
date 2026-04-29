@@ -1,10 +1,9 @@
 import pandas as pd
-import json
 import os
-from constants import JiraFields
+from common.constants import JiraFields
 from datetime import datetime
-from parser import parse_issue_info
-from excel_style import apply_excel_style
+from services.parser import parse_issue_info
+from services.excel_style import apply_excel_style
 
 # 3. 메인 저장 프로세스
 def process_and_save(raw_response):
@@ -13,23 +12,12 @@ def process_and_save(raw_response):
         return
     
     # 폴더 및 경로 설정
-    current_dir = os.path.dirname(os.path.abspath(__file__)) 
-    excel_dir = os.path.join(current_dir, "Excel") # 저장 폴더 절대 경로 설정
+    service_root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    excel_dir = os.path.join(service_root_dir, "Excel") # 저장 폴더 절대 경로 설정
     os.makedirs(excel_dir, exist_ok=True) # 폴더 없으면 자동으로 생성
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     excel_file_path = os.path.join(excel_dir, f"jira_export_{timestamp}.xlsx")
-
-    # Json 폴더에 로그 저장
-    # json_dir = os.path.join(current_dir, "Json")
-    # os.makedirs(json_dir, exist_ok=True)
-    # json_file_path = os.path.join(json_dir, f"log_{timestamp}.json")
-    # with open(json_file_path, "w", encoding="utf-8") as f:
-    #     json.dump(raw_response, f, indent=4, ensure_ascii=False)
-    # print(f"로그 저장 완료: {json_file_path}")
-
-    # 탭별 데이터 리스트
-    # tabs = { "Total_Issues": [], "CRQ_Only": [], "LGE_PI_Filtered": [], "Exec_Summary_Report": [] }
     
     # 탭별 조합(Combination) 리스트
     total_issues = [] # Sheet 1: 전체 항목

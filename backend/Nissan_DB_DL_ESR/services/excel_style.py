@@ -1,5 +1,5 @@
 import openpyxl
-from constants import JiraFields
+from common.constants import JiraFields
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 
 def apply_excel_style(file_path, sheet_names):
@@ -36,10 +36,6 @@ def apply_excel_style(file_path, sheet_names):
             for cell in col:
                 cell.border = thin_border
                 if cell.row > 1:
-                    cell.alignment = align_left
-                if header_value in ["DBC File Name", "File Name"]:
-                    cell.alignment = align_wrap
-                else:
                     cell.alignment = align_left
 
             # 3. [핵심] 헤더 이름을 기준으로 너비 결정

@@ -2,10 +2,10 @@ import openpyxl
 import pandas as pd
 import os
 from openpyxl import load_workbook
-from constants import JiraFields
+from common.constants import JiraFields
 from datetime import datetime
-from parser import parse_issue_info
-from excel_style import apply_excel_style
+from services.parser import parse_issue_info
+from services.excel_style import apply_excel_style
 
 # 3. 메인 저장 프로세스
 def process_and_save(raw_response):
@@ -14,8 +14,8 @@ def process_and_save(raw_response):
         return
     
     # 폴더 및 경로 설정
-    current_dir = os.path.dirname(os.path.abspath(__file__)) 
-    excel_dir = os.path.join(current_dir, "Excel") # 저장 폴더 절대 경로 설정
+    service_root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    excel_dir = os.path.join(service_root_dir, "Excel") # 저장 폴더 절대 경로 설정
     os.makedirs(excel_dir, exist_ok=True) # 폴더 없으면 자동으로 생성
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")

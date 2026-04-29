@@ -1,5 +1,3 @@
-# constants.py
-
 class JiraFields:
     # 커스텀 필드 ID 매핑
     SUPPLIER = "customfield_13114"
