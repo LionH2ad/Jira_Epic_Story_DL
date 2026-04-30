@@ -39,3 +39,17 @@ class JiraConfig:
                 encoding="utf-8", 
                 line_buffering=True
             )
+
+    BASE_SAVE_PATH = "D:/NISSAN_JIRA_DATA"
+
+    @staticmethod
+    def get_excel_path(service_name):
+        """서비스명을 받아 D 드라이브 내 최종 저장 경로를 반환"""
+        excel_dir = os.path.join(JiraConfig.BASE_SAVE_PATH, service_name)
+        try:
+            os.makedirs(excel_dir, exist_ok=True)
+        except Exception:
+            # D 드라이브 실패 시 대안 경로 (프로젝트 루트/Excel)
+            excel_dir = os.path.join(os.getcwd(), "Excel")
+            os.makedirs(excel_dir, exist_ok=True)
+        return excel_dir

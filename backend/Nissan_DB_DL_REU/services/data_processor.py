@@ -1,9 +1,10 @@
 import openpyxl
 import pandas as pd
 import os
-from openpyxl import load_workbook
-from common.constants import JiraFields
 from datetime import datetime
+from openpyxl import load_workbook
+from common.config import JiraConfig
+from common.constants import JiraFields
 from services.parser import parse_issue_info
 from services.excel_style import apply_excel_style
 
@@ -13,13 +14,26 @@ def process_and_save(raw_response):
         print("가공할 데이터가 없습니다.")
         return
     
-    # 폴더 및 경로 설정
-    service_root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    excel_dir = os.path.join(service_root_dir, "Excel") # 저장 폴더 절대 경로 설정
-    os.makedirs(excel_dir, exist_ok=True) # 폴더 없으면 자동으로 생성
+    # [1. D 드라이브 경로 및 서비스명 설정]
+    # 상위 폴더명(Nissan_DB_DL_ESR)을 서비스 이름으로 추출
+    service_name = os.path.basename(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    # 최종 저장 경로: D:/NISSAN_JIRA_DATA/Nissan_DB_DL_ESR
+    excel_dir = JiraConfig.get_excel_path(service_name)
+    
+    try:
+        os.makedirs(excel_dir, exist_ok=True) # 폴더 없으면 자동으로 생성
+    except Exception as e:
+        print(f"❌ D 드라이브 경로를 생성할 수 없습니다. 권한을 확인하세요: {e}")
+        # 대안으로 현재 서비스 폴더 내 Excel 폴더 사용
+        service_root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        excel_dir = os.path.join(service_root_dir, "Excel")
+        os.makedirs(excel_dir, exist_ok=True)
+        print(f"⚠️ 대안 경로로 변경됨: {excel_dir}")
 
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    excel_file_path = os.path.join(excel_dir, f"jira_export_{timestamp}.xlsx")
+    # [2. 파일명 설정]
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M")
+    # 파일명에도 서비스 이름을 포함하여 구분하기 쉽게 설정
+    excel_file_path = os.path.join(excel_dir, f"DB_{service_name}_{timestamp}.xlsx")
    
     # 탭별 조합(Combination) 리스트
     dbc_tab_list = [] # Sheet 1: CAN DBC
