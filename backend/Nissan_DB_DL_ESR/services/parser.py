@@ -1,5 +1,5 @@
 import re
-from common.constants import JiraFields
+from backend.common.constants import JiraFields
 
 def get_value(field_data):
     """데이터가 없으면 공백 한 칸(" ")을 반환하는 함수"""

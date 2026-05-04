@@ -1,7 +1,7 @@
 import requests
 from requests.auth import HTTPBasicAuth
-from common.config import JiraConfig
-from common.constants import JiraFields
+from backend.common.config import JiraConfig
+from backend.common.constants import JiraFields
 
 
 def fetch_issues(jql):

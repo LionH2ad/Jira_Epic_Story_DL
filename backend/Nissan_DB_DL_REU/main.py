@@ -1,13 +1,16 @@
 import sys
 import os
 
-# 현재 파일(main.py)의 부모 폴더의 부모 폴더가 'backend'입니다.
-BACKEND_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-if BACKEND_DIR not in sys.path:
-    sys.path.insert(0, BACKEND_DIR)
+CURRENT_SERVICE_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from common.config import JiraConfig
-from common.jira_client import fetch_issues
+if CURRENT_SERVICE_DIR not in sys.path:
+    sys.path.insert(0, CURRENT_SERVICE_DIR)
+if ROOT_DIR not in sys.path:
+    sys.path.insert(0, ROOT_DIR)
+
+from backend.common.config import JiraConfig
+from backend.common.jira_client import fetch_issues
 from services.data_processor import process_and_save
 
 def main():

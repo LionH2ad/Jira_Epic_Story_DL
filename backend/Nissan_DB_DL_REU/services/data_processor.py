@@ -3,10 +3,11 @@ import pandas as pd
 import os
 from datetime import datetime
 from openpyxl import load_workbook
-from common.config import JiraConfig
-from common.constants import JiraFields
+from backend.common.config import JiraConfig
+from backend.common.constants import JiraFields
+from backend.common.excel_style import apply_excel_style
+
 from services.parser import parse_issue_info
-from services.excel_style import apply_excel_style
 
 # 3. 메인 저장 프로세스
 def process_and_save(raw_response):
@@ -136,6 +137,6 @@ def process_and_save(raw_response):
 
     # 4단계: 디자인 스타일 적용 (생성된 모든 시트 대상)
     sheet_names = writer.sheets.keys() # 실제로 생성된 시트 이름만 가져오기
-    apply_excel_style(excel_file_path, list(sheet_names))
+    apply_excel_style(excel_file_path, list(sheet_names), theme_name="default_theme")
     
     print(f"성공! 멀티 탭 파일 생성됨: {excel_file_path}")
