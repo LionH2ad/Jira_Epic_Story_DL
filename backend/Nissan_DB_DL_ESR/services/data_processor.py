@@ -3,8 +3,6 @@ import os
 from datetime import datetime
 from backend.common.config import JiraConfig
 from backend.common.constants import JiraFields
-from backend.common.excel_style import apply_excel_style
-
 from services.parser import parse_issue_info
 
 # 3. 메인 저장 프로세스
@@ -22,12 +20,12 @@ def process_and_save(raw_response):
     try:
         os.makedirs(excel_dir, exist_ok=True) # 폴더 없으면 자동으로 생성
     except Exception as e:
-        print(f"❌ D 드라이브 경로를 생성할 수 없습니다. 권한을 확인하세요: {e}")
+        print(f"D dreive 경로를 생성할 수 없습니다. 권한을 확인하세요: {e}")
         # 대안으로 현재 서비스 폴더 내 Excel 폴더 사용
         service_root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         excel_dir = os.path.join(service_root_dir, "Excel")
         os.makedirs(excel_dir, exist_ok=True)
-        print(f"⚠️ 대안 경로로 변경됨: {excel_dir}")
+        print(f"대안 경로로 변경됨: {excel_dir}")
 
     # [2. 파일명 설정]
     timestamp = datetime.now().strftime("%Y%m%d_%H%M")
@@ -43,6 +41,7 @@ def process_and_save(raw_response):
     for issue in raw_response["issues"]:
         # 1단계: 모든 정보가 포함된 info 데이터 추출
         info = parse_issue_info(issue) # parse_issue_info
+        is_lge = str(info["Supplier"]).strip() == JiraFields.TARGET_SUPPLIER
         
         # 2단계 
         # Sheet 1 항목
@@ -78,7 +77,6 @@ def process_and_save(raw_response):
 
         # Sheet 3 (Supplier=LGE & 특정 PI Label 포함)
         # 조건 1: Supplier = "LGE"
-        is_lge = str(info["Supplier"]).strip() == JiraFields.TARGET_SUPPLIER
         # 조건 2: Labels에 지정된 PI 키워드가 하나라도 있는지 확인
         has_pi_label = any(label in info["Labels_Raw"] for label in JiraFields.PI_TARGET_LABELS)
 
@@ -95,9 +93,8 @@ def process_and_save(raw_response):
         # Sheet 4 Executive Summary
         # 조건 1: Supplier = "LGE"
         # 조건 2: Status가 제외 목록에 포함되지 않는지 확인
-        # is_active_status = info["Status"] not in JiraFields.EXCLUDE_STATUS_LIST
-        is_active_status = info["Status"].strip().lower() not in [status.lower() for status in JiraFields.EXCLUDE_STATUS_LIST]
         # 조건 3: Executive Summary가 비어있지 않은지 확인 (" " 한 칸 공백은 비어있는 것으로 간주)
+        is_active_status = info["Status"].strip().lower() not in [status.lower() for status in JiraFields.EXCLUDE_STATUS_LIST]
         exec_summary = info.get("Executive_Summary", " ")
         is_summary_not_empty = exec_summary.strip() != ""
 
@@ -115,20 +112,14 @@ def process_and_save(raw_response):
         # 데이터가 있는 경우에만 시트 생성
         if total_issues:
             pd.DataFrame(total_issues).to_excel(writer, sheet_name=JiraFields.SHEET_TOTAL, index=False)
-
         if crq_tab:
             pd.DataFrame(crq_tab).to_excel(writer, sheet_name=JiraFields.SHEET_CRQ, index=False)
-
         if second_sop_tab:
             pd.DataFrame(second_sop_tab).to_excel(writer, sheet_name=JiraFields.SHEET_SECOND_SOP, index=False)
-
         if executive_summary_tab:
             pd.DataFrame(executive_summary_tab).to_excel(writer, sheet_name=JiraFields.SHEET_EXEC, index=False)
 
-    # 4단계: 디자인 스타일 적용 (생성된 모든 시트 대상)
     sheet_names = list(writer.sheets.keys()) # 실제로 생성된 시트 이름만 가져오기
-    # apply_excel_style(excel_file_path, sheet_names, theme_name="default_theme")
-    
-    print(f"성공! 멀티 탭 파일 생성됨: {excel_file_path}")
+    print(f"created multi tab file: {excel_file_path}")
 
     return excel_file_path, sheet_names

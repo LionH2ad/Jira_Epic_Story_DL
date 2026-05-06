@@ -6,7 +6,6 @@ from openpyxl import load_workbook
 from backend.common.config import JiraConfig
 from backend.common.constants import JiraFields
 from backend.common.excel_style import apply_excel_style
-
 from services.parser import parse_issue_info
 
 # 3. 메인 저장 프로세스
@@ -24,12 +23,12 @@ def process_and_save(raw_response):
     try:
         os.makedirs(excel_dir, exist_ok=True) # 폴더 없으면 자동으로 생성
     except Exception as e:
-        print(f"❌ D 드라이브 경로를 생성할 수 없습니다. 권한을 확인하세요: {e}")
+        print(f"D 드라이브 경로를 생성할 수 없습니다. 권한을 확인하세요: {e}")
         # 대안으로 현재 서비스 폴더 내 Excel 폴더 사용
         service_root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         excel_dir = os.path.join(service_root_dir, "Excel")
         os.makedirs(excel_dir, exist_ok=True)
-        print(f"⚠️ 대안 경로로 변경됨: {excel_dir}")
+        print(f"대안 경로로 변경됨: {excel_dir}")
 
     # [2. 파일명 설정]
     timestamp = datetime.now().strftime("%Y%m%d_%H%M")
@@ -40,15 +39,14 @@ def process_and_save(raw_response):
     dbc_tab_list = [] # Sheet 1: CAN DBC
     aasp_tab_list = [] # Sheet 1: aasp
 
-    active_index = 1 # Status가 Close가 아닌 티켓용 번호
-    active_aasp_index = 1
-    base_url = "https://spaws.jp.nissan.biz/jira/browse/"
-
     for issue in raw_response["issues"]:
         # 1단계: 모든 정보가 포함된 info 데이터 추출
         info = parse_issue_info(issue) # parse_issue_info
         is_lge = str(info["Supplier"]).strip() == JiraFields.TARGET_SUPPLIER
         is_epic = info["Type"] == "Epic"
+        active_index = 1 # Status가 Close가 아닌 티켓용 번호
+        active_aasp_index = 1
+        base_url = "https://spaws.jp.nissan.biz/jira/browse/"
         
         # 2단계 
         # Sheet 1 CAN DBC
@@ -136,7 +134,9 @@ def process_and_save(raw_response):
     wb.save(excel_file_path)
 
     # 4단계: 디자인 스타일 적용 (생성된 모든 시트 대상)
-    sheet_names = writer.sheets.keys() # 실제로 생성된 시트 이름만 가져오기
-    apply_excel_style(excel_file_path, list(sheet_names), theme_name="default_theme")
-    
-    print(f"성공! 멀티 탭 파일 생성됨: {excel_file_path}")
+    sheet_names = list(writer.sheets.keys()) # 실제로 생성된 시트 이름만 가져오기
+    # apply_excel_style(excel_file_path, sheet_names, theme_name="default_theme")
+
+    print(f"created multi tab file: {excel_file_path}")
+
+    return excel_file_path, sheet_names

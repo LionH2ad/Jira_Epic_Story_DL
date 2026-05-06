@@ -12,7 +12,6 @@ if ROOT_DIR not in sys.path:
 from backend.common.config import JiraConfig
 from backend.common.jira_client import fetch_issues
 from services.data_processor import process_and_save
-
 from shared.theme.theme_manager import ThemeManager
 from backend.common.excel_style import apply_excel_style
 
@@ -42,6 +41,7 @@ def main():
     if file_path:
         print(f"Saving...")
         apply_excel_style(file_path, sheet_names, theme)
+        print(f"File saved successfully")
         print(f"file: {file_path}")
         print("--- ESR Process Done ---")
     else:
