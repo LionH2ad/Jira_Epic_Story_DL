@@ -40,16 +40,19 @@ class JiraConfig:
                 line_buffering=True
             )
 
-    BASE_SAVE_PATH = "D:/NISSAN_JIRA_DATA"
-
     @staticmethod
     def get_excel_path(service_name):
-        """서비스명을 받아 D 드라이브 내 최종 저장 경로를 반환"""
-        excel_dir = os.path.join(JiraConfig.BASE_SAVE_PATH, service_name)
+        """
+        서비스명(ESR, REU 등)을 받아 프로젝트 루트/DownLoad/서비스명 경로를 반환합니다.
+        """
+        excel_dir = os.path.join(BASE_DIR, "DownLoad", service_name)
+
         try:
             os.makedirs(excel_dir, exist_ok=True)
-        except Exception:
-            # D 드라이브 실패 시 대안 경로 (프로젝트 루트/Excel)
-            excel_dir = os.path.join(os.getcwd(), "Excel")
+        except Exception as e:
+            # 예외 발생 시 현재 실행 경로에라도 저장하도록 폴백(Fallback) 처리
+            excel_dir = os.path.join(os.getcwd(), "DownLoad_Backup")
             os.makedirs(excel_dir, exist_ok=True)
+            print(f"폴더 생성 오류로 백업 경로 사용: {e}")
+
         return excel_dir

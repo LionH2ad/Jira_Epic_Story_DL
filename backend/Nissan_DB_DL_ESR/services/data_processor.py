@@ -3,29 +3,15 @@ import os
 from datetime import datetime
 from backend.common.config import JiraConfig
 from backend.common.constants import JiraFields
-from services.parser import parse_issue_info
+from backend.Nissan_DB_DL_ESR.services.parser import parse_issue_info
 
 # 3. 메인 저장 프로세스
-def process_and_save(raw_response):
+def process_and_save(raw_response, service_name):
     if not raw_response or "issues" not in raw_response:
         print("가공할 데이터가 없습니다.")
         return
-    
-    # [1. D 드라이브 경로 및 서비스명 설정]
-    # 상위 폴더명(Nissan_DB_DL_ESR)을 서비스 이름으로 추출
-    service_name = os.path.basename(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    # 최종 저장 경로: D:/NISSAN_JIRA_DATA/Nissan_DB_DL_ESR
+
     excel_dir = JiraConfig.get_excel_path(service_name)
-    
-    try:
-        os.makedirs(excel_dir, exist_ok=True) # 폴더 없으면 자동으로 생성
-    except Exception as e:
-        print(f"D dreive 경로를 생성할 수 없습니다. 권한을 확인하세요: {e}")
-        # 대안으로 현재 서비스 폴더 내 Excel 폴더 사용
-        service_root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        excel_dir = os.path.join(service_root_dir, "Excel")
-        os.makedirs(excel_dir, exist_ok=True)
-        print(f"대안 경로로 변경됨: {excel_dir}")
 
     # [2. 파일명 설정]
     timestamp = datetime.now().strftime("%Y%m%d_%H%M")
