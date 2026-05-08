@@ -5,6 +5,7 @@ import asyncio
 from concurrent.futures import ThreadPoolExecutor # 스레드 관리를 위한 라이브러리
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import StreamingResponse
 import uvicorn
 import traceback # 에러 추적용
 
@@ -22,23 +23,27 @@ app.add_middleware(
 # 프로젝트별로 독립된 main()을 호출하는 함수
 def run_script_with_live_logs(folder_name):
     """
-    각 폴더의 main.py를 독립된 프로세스로 실행하고
-    터미널에 로그를 즉시(flush) 출력합니다.
+    각 폴더의 main.py를 직접 실행하는 대신, 
+    루트의 run.py를 통해 서비스를 실행하여 경로 문제를 해결합니다.
     """
+    # 1. 프로젝트 루트 경로 계산 (backend 폴더의 상위)
     backend_dir = os.path.dirname(os.path.abspath(__file__))
-    project_dir = os.path.join(backend_dir, folder_name)
-    main_file = os.path.join(project_dir, "main.py")
+    root_dir = os.path.dirname(backend_dir) # NISSAN_CDC 루트
+
+    # 2. 실행할 run.py의 절대 경로
+    run_py = os.path.join(root_dir, "run.py")
 
     print(f"\n[{folder_name}] 작업을 시작합니다...", flush=True)
 
-    # subprocess.Popen을 사용해 터미널 명령어를 실행하는 것과 동일한 효과
-    # -u 옵션은 파이썬 로그가 쌓이지 않고 바로 나오게 합니다.
+    # - main_file 대신 run_py를 실행합니다.
+    # - 인자로 folder_name(서비스명)을 전달합니다.
+    # - cwd를 root_dir로 설정하여 run.py가 shared를 찾게 합니다.
     process = subprocess.Popen(
-        [sys.executable, "-u", main_file],
+        [sys.executable, "-u", run_py, folder_name], # run.py 실행 + 서비스명 전달
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
         text=True,
-        cwd=project_dir, # 해당 프로젝트 폴더 안에서 실행 (중요)
+        cwd=root_dir,  # <--- 매우 중요: 프로젝트 루트에서 실행
         bufsize=1,
         encoding='utf-8',
         errors='replace'
@@ -51,6 +56,54 @@ def run_script_with_live_logs(folder_name):
 
     process.wait()
     return process.returncode
+
+async def run_live_generator(folder_name):
+    # 1. 경로 설정
+    backend_dir = os.path.dirname(os.path.abspath(__file__))
+    root_dir = os.path.dirname(backend_dir)
+    run_py = os.path.join(root_dir, "run.py")
+
+    # 2. 환경변수 설정 (버퍼링 강제 제거)
+    env = os.environ.copy()
+    env["PYTHONUNBUFFERED"] = "1"
+
+    # 3. 프로세스 실행 (바이트 모드로 유지하여 인코딩 문제 방지)
+    process = subprocess.Popen(
+        [sys.executable, "-u", run_py, folder_name],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=False,
+        cwd=root_dir,
+        env=env
+    )
+
+    yield f"data: [{folder_name}] 프로세스 연결 성공\n\n"
+
+    # 4. 실시간 로그 읽기
+    while True:
+        line = process.stdout.readline()
+        if not line:
+            if process.poll() is not None: break
+            await asyncio.sleep(0.1)
+            continue
+            
+        # 인코딩 방어 처리 (UTF-8 -> CP949)
+        try:
+            decoded = line.decode('utf-8').strip()
+        except:
+            decoded = line.decode('cp949', errors='replace').strip()
+        
+        if decoded:
+            yield f"data: {decoded}\n\n"
+            await asyncio.sleep(0.01) # UI 갱신을 위한 미세 지연
+
+    process.wait()
+    yield f"data: [{folder_name}] 작업이 완료되었습니다.\n\n"
+
+@app.get("/run/{folder_name}")
+async def run_service(folder_name: str):
+    # StreamingResponse를 사용하여 실시간으로 로그를 쏨
+    return StreamingResponse(run_live_generator(folder_name), media_type="text/event-stream")
 
 @app.get("/")
 def read_root():

@@ -12,7 +12,7 @@ def start_service(service_name):
     # 모듈 경로 구성 (예: backend.Nissan_DB_DL_ESR.main)
     module_path = f"backend.{service_name}.main"
     
-    print(f"서비스 실행 시도: {service_name}")
+    print(f"실행 시도: {service_name}")
     
     try:
         # 동적 모듈 로드
@@ -20,9 +20,9 @@ def start_service(service_name):
         if hasattr(service_module, "main"):
             service_module.main()
         else:
-            print(f"에러: {module_path}에 main() 함수가 없습니다.")
+            print(f"error: {module_path}에 main() 함수가 없습니다.")
     except ModuleNotFoundError as e:
-        print(f"에러: 서비스를 찾을 수 없습니다. 경로를 확인하세요. ({e})")
+        print(f"error: please check path. ({e})")
     except Exception as e:
         print(f"실행 중 오류 발생: {e}")
 
